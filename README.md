@@ -1,5 +1,3 @@
-# Eric Teo
-
 * CMake
 
   * [CMake 安装](CMake/001_CMake安装.md)
@@ -32,11 +30,17 @@
 
 * Skill
 
+  * [CXX CSharp Java调用CXX DLL](Skill/CXXCSharpJava调用CXXDLL.md)
+
   * [Docker & docker-compose](Skill/Docker.md)
 
   * [MySQL安装](Skill/MySQL.md)
 
+  * [MySQL常见问题及优化](Skill/MySql常见问题及优化.md)
+
   * [VS2019 创建离线安装包](Skill/VS2019创建离线安装包.md)
+
+  * [安卓 NDK native 方法 crash 定位分析](Skill/安卓NDKnative方法crash定位分析.md)
 
 
 

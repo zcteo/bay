@@ -4,7 +4,7 @@ readme_file=$(pwd)/README.md
 rm -f "$readme_file"
 tmp=$(pwd)/tmp
 dirs=$(ls)
-printf "# Eric Teo\n\n" >"$readme_file"
+# printf "# Eric Teo\n\n" >"$readme_file"
 for dir in $dirs; do
 
     if [ -f "$dir" ] || [ "$dir" = "SaveOnly" ]; then
