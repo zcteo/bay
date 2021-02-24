@@ -22,7 +22,7 @@ for dir in $dirs; do
                     line=$(sed 's/#//g' "$tmp")
                     echo "$line" >"$tmp"
                     # 去掉开头的空格
-                    line=$(sed 's/^[ \t]*//g' <"$tmp")
+                    line=$(sed 's/^[ \t]*//g' "$tmp")
 
                     printf "  * [%s](%s)\n\n" "$line" "$dir/$file" >>"$readme_file"
                 fi

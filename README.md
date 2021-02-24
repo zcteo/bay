@@ -28,6 +28,8 @@
 
   * [配置 Clion Qt 开发环境](QT/002_Clion开发Qt.md)
 
+  * [Clion 创建 Qt UI Class 踩坑](QT/003_Clion创建QtUIClass踩坑.md)
+
 * Skill
 
   * [CXX CSharp Java调用CXX DLL](Skill/CXXCSharpJava调用CXXDLL.md)
