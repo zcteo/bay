@@ -4,8 +4,8 @@ file_name=$(pwd)/blog.md
 rm -f "$file_name"
 tmp=$(pwd)/tmp
 
-cd blogs &&
-dirs=$(ls)
+cd blog &&
+    dirs=$(ls)
 # printf "# Eric Teo\n\n" >"$file_name"
 for dir in $dirs; do
 
@@ -26,7 +26,7 @@ for dir in $dirs; do
                     # 去掉开头的空格
                     line=$(sed 's/^[ \t]*//g' "$tmp")
 
-                    printf "  * [%s](%s)\n\n" "$line" "$dir/$file" >>"$file_name"
+                    printf "  * [%s](blog/%s)\n\n" "$line" "$dir/$file" >>"$file_name"
                 fi
             done
         )
