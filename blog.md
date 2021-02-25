@@ -1,3 +1,8 @@
+---
+  layout: blog
+  title: Blog
+  slug: /blog
+---
 * CMake
 
   * [CMake 安装](blog/CMake/001_CMake安装.md)

@@ -7,6 +7,9 @@ tmp=$(pwd)/tmp
 cd blog &&
     dirs=$(ls)
 # printf "# Eric Teo\n\n" >"$file_name"
+echo '---' >"$file_name"
+printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
+echo '---' >>"$file_name"
 for dir in $dirs; do
 
     if [ -f "$dir" ] || [ "$dir" = "SaveOnly" ]; then
