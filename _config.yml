@@ -1,2 +1,19 @@
-theme: jekyll-theme-tactile
-title: Eric Teo
+remote_theme: zcteo/bay
+og_image: /assets/img/header.png
+header:
+  pages:
+    - name: Home
+      slug: /
+    - name: Blog
+    - name: About
+
+footer:
+  show_powered_by: false
+  contact:
+    - name: Email
+      value: zcteo.cn@gmail.com
+      link: mailto:zcteo.cn@gmail.com
+  follow:
+    - name: GitHub
+      link: http://github.com/zcteo
+
