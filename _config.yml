@@ -13,9 +13,14 @@ footer:
     - name: Email
       value: zcteo.cn@gmail.com
       link: mailto:zcteo.cn@gmail.com
+    - name: WeChat
+      value: EricTeo-
+      link: "#"
   follow:
     - name: GitHub
-      link: http://github.com/zcteo
+      link: https://github.com/zcteo
+    - name: WeiBo
+      link: https://weibo.com/u/6664803739
 
 valine:
   enable: true
