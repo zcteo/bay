@@ -17,3 +17,8 @@ footer:
     - name: GitHub
       link: http://github.com/zcteo
 
+valine:
+  enable: true
+  leanCloud_app_id: 'o84Egzh8KNWz67spySSU3xln-gzGzoHsz'
+  leanCloud_app_key: 'o2VCxaUgT8sO4FDDN4fyeoV9'
+  placeholder: '欢迎提出您的宝贵意见'

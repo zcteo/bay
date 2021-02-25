@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
 
-  <body>
-    {% include header.html %}
+{% include head.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+<body>
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrapper">
+      {{ content }}
     </div>
+    <!-- valine 评论系统 -->
+    {% if site.valine.enable %}
+    <div id="valineComments" class="wrapper"></div>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script>
+      new Valine({
+        el: '#valineComments',
+        appId: '{{ site.valine.leanCloud_app_id }}',
+        appKey: '{{ site.valine.leanCloud_app_key }}',
+        placeholder: '{{ site.valine.placeholder }}'
+      })
+    </script>
+    {% endif %}
+  </div>
 
-    {% include footer.html %}
-    
-    {% include foot.html %}
-  </body>
+  {% include footer.html %}
+
+  {% include foot.html %}
+</body>
+
 </html>
