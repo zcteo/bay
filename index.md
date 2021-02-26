@@ -9,11 +9,5 @@ profile_picture:
     Eric Teo 的 Markdown 笔记存储站
 </p>
 <p>
-    托管于 <a href="https://github.com/zcteo/zcteo.github.io">GitHub</a>
-</p>
-<p>
-    使用的模板 <a href="https://github.com/eliottvincent/bay">bay</a>
-</p>
-<p>
-    使用的评论系统 <a href="https://valine.js.org/">Valine</a>
+    由 GitHub Pages 自动生成
 </p>
