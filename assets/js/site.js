@@ -1,15 +1,15 @@
 /**
  * Menu
  */
- $("a.menu-icon").on("click", function(event) {
-   var w = $(".menu");
+$("a.menu-icon").on("click", function (event) {
+  var w = $(".menu");
 
-   w.css({
-     display: w.css("display") === "none"
+  w.css({
+    display: w.css("display") === "none"
       ? "block"
       : "none"
-   });
- });
+  });
+});
 
 /**
  * Wechat widget
@@ -23,15 +23,15 @@ function moveWidget(event) {
   });
 }
 
-$("a#wechat-link").on("mouseenter", function(event) {
+$("a#wechat-link").on("mouseenter", function (event) {
   $("#wechat-widget").css({ display: "block" });
   moveWidget(event);
 });
 
-$("a#wechat-link").on("mousemove", function(event) {
+$("a#wechat-link").on("mousemove", function (event) {
   moveWidget(event);
 });
 
-$("a#wechat-link").on("mouseleave", function(event) {
+$("a#wechat-link").on("mouseleave", function (event) {
   $("#wechat-widget").css({ display: "none" });
 });

@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    {% include header.html %}
+<body>
+  {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="home">
-          <img
-            src="{{ page.profile_picture.src | absolute_url }}"
-            alt="{{ page.profile_picture.alt }}"
-            class="profilepic"
-          />
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="home">
+        <img src="{{ page.profile_picture.src | absolute_url }}" alt="{{ page.profile_picture.alt }}"
+          class="profilepic" />
 
-          {{ content }}
-        </div>
+        {{ content }}
       </div>
     </div>
+  </div>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-    {% include foot.html %}
-  </body>
+  {% include foot.html %}
+</body>
+
 </html>

@@ -132,7 +132,7 @@
   width: calc(33% - (#{$spacing-unit} / 2));
 }
 
-.follow-links > .social-link {
+.follow-links>.social-link {
   flex: 0 50%;
 }
 
