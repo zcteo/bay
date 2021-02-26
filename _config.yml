@@ -22,8 +22,18 @@ footer:
     - name: WeiBo
       link: https://weibo.com/u/6664803739
 
+# 评论系统
 valine:
   enable: true
   leanCloud_app_id: 'o84Egzh8KNWz67spySSU3xln-gzGzoHsz'
   leanCloud_app_key: 'o2VCxaUgT8sO4FDDN4fyeoV9'
   placeholder: '欢迎提出您的宝贵意见'
+
+# 访问分析系统
+analytics:
+  google:
+    enable: true
+    value: 'G-LGY8CHNCVB'
+  baidu:
+    enable: true
+    value: '774e787dc731c8f79c3249dbb9280504'

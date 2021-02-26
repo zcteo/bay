@@ -64,24 +64,28 @@
   <link rel="canonical" href="{{ page_url }}" />
   <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}" type="image/x-icon" />
 
-  <!-- Google Analytics -->
+  {% if site.analytics.google.enable %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.value }}"></script>
   <script>
-    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
-    ga('create', "{{ site.google_analytics }}", "auto");
-    ga('send', "pageview");
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.analytics.google.value }}');
   </script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  {% endif %}
 
+  {% if site.analytics.baidu.enable %}
   <!-- 百度统计 -->
   <script>
     var _hmt = _hmt || [];
     (function () {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?af9f84be77a87ab341eb0c8b40ec3eeb";
+      hm.src = "https://hm.baidu.com/hm.js?{{ site.analytics.baidu.value }}";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
-
+  {% endif %}
 
 </head>
