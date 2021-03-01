@@ -21,6 +21,11 @@ footer:
       link: https://github.com/zcteo
     - name: WeiBo
       link: https://weibo.com/u/6664803739
+    - name: Twitter
+      link: https://twitter.com/zcteo
+      username: "@zcteo"
+    - name: Facebook
+      link: https://facebook.com/zcteo
 
 # 评论系统
 valine:

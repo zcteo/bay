@@ -12,7 +12,7 @@
             <img src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}" />
 
             <a href="{{ contact.link }}" id="{{ contact.name | downcase }}-link"
-              {% if contact.name | downcase ="wechat"   %} target="_self" {% endif %}>
+              {% if contact.name | downcase = "wechat" %} target="_self" {% endif %}>
               {% if contact.value and contact.value != "" and contact.value != nil %}
               {{ contact.value }}
               {% else %}
