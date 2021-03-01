@@ -10,9 +10,12 @@
       <div class="home">
         <img src="{{ page.profile_picture.src | absolute_url }}" alt="{{ page.profile_picture.alt }}"
           class="profilepic" />
-
         {{ content }}
       </div>
+      <!-- 今日诗词 -->
+      <div id="poem">正在加载今日诗词....</div>
+      <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+      <script type="text/javascript" src="{{ '/assets/js/poem.js' | absolute_url }}"></script>
     </div>
   </div>
 
