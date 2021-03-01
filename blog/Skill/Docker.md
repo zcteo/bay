@@ -6,7 +6,31 @@
 
 ### 国内镜像加速配置
 
-[DaoCloud](https://www.daocloud.io/mirror)
+1. [DaoCloud](https://www.daocloud.io/mirror)
+
+   *目前好像不太行了 - 2020年8月2日*
+
+2. 创建或修改 /etc/docker/daemon.json 文件
+
+   ```json
+   {
+       "registry-mirrors": ["https://registry.docker-cn.com"]
+   }
+   ```
+
+   > 可直接使用的镜像链接：
+   >
+   > docker中国：https://registry.docker-cn.com
+   >
+   > 网易：http://hub-mirror.c.163.com
+   >
+   > 中科大：https://docker.mirrors.ustc.edu.cn
+   >
+   > ----
+   >
+   > 阿里云容器服务
+   > <https://cr.console.aliyun.com/>
+   > 首页点击”创建我的容器镜像“，得到一个专属的镜像加速地址
 
 ### 基本命令
 
