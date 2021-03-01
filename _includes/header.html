@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="wrapper">
-    <a class="site-title" href="{{ '' | prepend: site.baseurl | prepend: site.url }}/">
+    <a class="site-title" href="{{ '' | prepend: site.baseurl | prepend: site.url }}/" target="_self">
       <img src="{{ '/assets/img/title.png' | absolute_url }}" alt="{{ site.title }}" />
     </a>
 
@@ -15,7 +15,7 @@
         {% assign page_link = "/" | append: page.name | downcase %}
         {% endif %}
         {% assign page_link = page_link | absolute_url %}
-        <a class="page-link" href="{{ page_link }}">
+        <a class="page-link" href="{{ page_link }}" target="_self">
           {{ page.name }}
         </a>
         {% endfor %}
