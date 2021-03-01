@@ -5,7 +5,6 @@ window.onload = function () {
     var time = null;
     var isTop = true,
         cancelScroll = false;
-
     window.onscroll = function () {
 
         var osTop = document.documentElement.scrollTop || document.body.scrollTop;
