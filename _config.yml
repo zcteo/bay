@@ -37,7 +37,7 @@ valine:
 # 访问分析系统
 analytics:
   google:
-    enable: true
+    enable: false
     value: 'G-H9X9BNEKZG'
   baidu:
     enable: true

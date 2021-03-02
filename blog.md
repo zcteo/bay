@@ -35,6 +35,8 @@
 
   * [Clion 创建 Qt UI Class 踩坑](blog/QT/003_Clion创建QtUIClass踩坑.md)
 
+  * [Linux Qt 使用搜狗输入法](blog/QT/004_Qt搜狗输入法.md)
+
 * Skill
 
   * [CXX CSharp Java调用CXX DLL](blog/Skill/CXXCSharpJava调用CXXDLL.md)

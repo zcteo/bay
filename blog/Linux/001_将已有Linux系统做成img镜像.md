@@ -327,7 +327,7 @@ sudo e2label /dev/$partition name
 fat 文件系统
 
 ```bash
-sudo mlabel -i /dev/&partition ::name
+sudo mlabel -i /dev/$partition ::name
 ```
 
 
