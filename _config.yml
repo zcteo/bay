@@ -38,7 +38,7 @@ valine:
 analytics:
   google:
     enable: true
-    value: 'G-LGY8CHNCVB'
+    value: 'G-H9X9BNEKZG'
   baidu:
     enable: true
     value: '774e787dc731c8f79c3249dbb9280504'
