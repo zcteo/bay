@@ -27,6 +27,10 @@
 
   * [Ubuntu 16.04 rootfs 启用 ttyAMA0](blog/Linux/006_Ubuntu_16.04_rootfs启用ttyAMA0.md)
 
+  * [Deepin V20 标题栏样式修改](blog/Linux/007_DeepinV20标题栏样式修改.md)
+
+  * [CLion 远程调试 Linux](blog/Linux/008_CLion远程调试Linux.md)
+
 * QT
 
   * [Linux 安装 QT](blog/QT/001_Linux安装QT.md)
@@ -39,15 +43,15 @@
 
 * Skill
 
-  * [CXX CSharp Java调用CXX DLL](blog/Skill/CXXCSharpJava调用CXXDLL.md)
+  * [CXX CSharp Java调用CXX DLL](blog/Skill/001_CXXCSharpJava调用CXXDLL.md)
 
-  * [Docker & docker-compose](blog/Skill/Docker.md)
+  * [Docker & docker-compose](blog/Skill/002_Docker.md)
 
-  * [Google play store 安装方法](blog/Skill/GooglePlayStore.md)
+  * [MySQL常见问题及优化](blog/Skill/003_MySql常见问题及优化.md)
 
-  * [MySQL常见问题及优化](blog/Skill/MySql常见问题及优化.md)
+  * [VS2017 & VS2019 创建离线安装包](blog/Skill/004_VS2019VS2019创建离线安装包.md)
 
-  * [VS2019 创建离线安装包](blog/Skill/VS2019创建离线安装包.md)
+  * [安卓 NDK native 方法 crash 定位分析](blog/Skill/005_安卓NDKnative方法crash定位分析.md)
 
-  * [安卓 NDK native 方法 crash 定位分析](blog/Skill/安卓NDKnative方法crash定位分析.md)
+  * [Google play store 安装方法](blog/Skill/006_GooglePlayStore.md)
 
