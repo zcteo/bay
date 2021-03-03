@@ -117,15 +117,15 @@ character-set-server=utf8
 
 ## 常见问题
 
-#### 1：char、varchar的区别是什么？
+### 1：char、varchar的区别是什么？
 
 varchar是变长而char的长度是固定的。如果你的内容是固定大小的，你会得到更好的性能。
 
-#### 2:  TRUNCATE和DELETE的区别是什么？
+### 2:  TRUNCATE和DELETE的区别是什么？
 
 DELETE命令从一个表中删除某一行，或多行，TRUNCATE命令永久地从表中删除每一行。
 
-#### 3：什么是触发器，mysql中都有哪些触发器？
+### 3：什么是触发器，mysql中都有哪些触发器？
 
 触发器是指一段代码，当触发某个事件时，自动执行这些代码。在mysql数据库中有如下六种触发器：
 
@@ -141,13 +141,13 @@ DELETE命令从一个表中删除某一行，或多行，TRUNCATE命令永久地
 
 6、After Delete
 
-#### 4：FLOAT和DOUBLE的区别是什么？
+### 4：FLOAT和DOUBLE的区别是什么？
 
 FLOAT类型数据可以存储至多8位十进制数，并在内存中占4字节。
 
 DOUBLE类型数据可以存储至多18位十进制数，并在内存中占8字节。
 
-#### 5：下面mysql数据类型表达的意义（int(0)、char(16)、varchar(16)、datetime、text）
+### 5：下面mysql数据类型表达的意义（int(0)、char(16)、varchar(16)、datetime、text）
 
 int(0)表示数据是INT类型，长度是0
 
@@ -159,11 +159,11 @@ datetime表示时间类型
 
 text表示字符串类型，能存储大字符串，最多存储65535字节数据
 
-#### 6：MySQL常用表引擎
+### 6：MySQL常用表引擎
 
 InnoDB、MyISAM、Memory
 
-#### 7：InnoDB和MyISAM的区别
+### 7：InnoDB和MyISAM的区别
 
 1、InnoDB支持事务，MyISAM不支持；
 
@@ -177,7 +177,7 @@ InnoDB、MyISAM、Memory
 
 6、InnoDB不支持全文索引，MyISAM支持全文索引；
 
-#### 8：Innodb引擎的特性
+### 8：Innodb引擎的特性
 
 1、插入缓冲（insert buffer)
 
@@ -187,7 +187,7 @@ InnoDB、MyISAM、Memory
 
 4、预读(read ahead)
 
-#### 9：varchar和text的区别
+### 9：varchar和text的区别
 
 1、varchar可指定字符数，text不能指定，内部存储varchar是存入的实际字符数+1个字节（n<=255）或2个字节(n>255)，text是实际字符数+2个字节。
 
@@ -197,15 +197,15 @@ InnoDB、MyISAM、Memory
 
 4、查询text需要创建临时表。
 
-#### 10：varchar(50)中50的含义
+### 10：varchar(50)中50的含义
 
 最多存放50个字符，varchar(50)和(200)存储hello所占空间一样，但后者在排序时会消耗更多内存，因为order by col采用fixed_length计算col长度(memory引擎也一样)。
 
-#### 11：int(20)中20的含义
+### 11：int(20)中20的含义
 
 是指显示字符的长度，不影响内部存储，只是当定义了ZEROFILL时，前面补多少个 0
 
-#### 12：MySQL中索引、主键、唯一索引、联合索引的区别，对数据库的性能有什么影响？
+### 12：MySQL中索引、主键、唯一索引、联合索引的区别，对数据库的性能有什么影响？
 
 一个表只能有一个主键索引，但是可以有多个唯一索引。
 
@@ -219,23 +219,23 @@ InnoDB、MyISAM、Memory
 
 5、全文索引：mysql自带的全文索引只能用于MyISAM，并且只能对英文进行全文检索 （基本不用）
 
-#### 13：创建MySQL联合索引应该注意什么？
+### 13：创建MySQL联合索引应该注意什么？
 
 需遵循前缀原则
 
-#### 14：列值为NULL时，查询是否会用到索引？
+### 14：列值为NULL时，查询是否会用到索引？
 
 在mysql里NULL值的列也是走索引的。当然，如果计划对列进行索引，就要尽量避免把它设置为可空，mysql难以优化引用了可空列的查询，它会使索引、索引统计和值更加复杂。
 
-#### 15：以下语句是否会应用索引：SELECT FROM users WHERE YEAR(adddate) < 2019;*
+### 15：以下语句是否会应用索引：SELECT FROM users WHERE YEAR(adddate) < 2019;*
 
 不会，因为只要列涉及到运算，mysql就不会使用索引。
 
-#### 16：MyISAM索引实现？
+### 16：MyISAM索引实现？
 
 MyISAM存储引擎使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。MyISAM的索引方式也叫做非聚簇索引的，之所以这么称呼是为了与InnoDB的聚簇索引区分。
 
-#### 17：MyISAM索引与InnoDB索引的区别？
+### 17：MyISAM索引与InnoDB索引的区别？
 
 1、InnoDB索引是聚簇索引，MyISAM索引是非聚簇索引。
 
@@ -245,7 +245,7 @@ MyISAM存储引擎使用B+Tree作为索引结构，叶节点的data域存放的�
 
 4、InnoDB非主键索引的叶子节点存储的是主键和其他带索引的列数据，因此查询时做到覆盖索引会非常高效。
 
-#### 18：MySQL的常用关联查询语句有哪些？
+### 18：MySQL的常用关联查询语句有哪些？
 
 1、交叉连接（CROSS JOIN）
 
@@ -259,7 +259,7 @@ MyISAM存储引擎使用B+Tree作为索引结构，叶节点的data域存放的�
 
 6、交叉连接（CROSS JOIN）
 
-##### 内连接（INNER JOIN）
+#### 内连接（INNER JOIN）
 
 1、等值连接：ON A.id=B.id
 
@@ -267,13 +267,13 @@ MyISAM存储引擎使用B+Tree作为索引结构，叶节点的data域存放的�
 
 3、自连接：SELECT * FROM A T1 INNER JOIN A T2 ON T1.id=T2.pid
 
-##### 外连接（LEFT JOIN/RIGHT JOIN）
+#### 外连接（LEFT JOIN/RIGHT JOIN）
 
 1、左外连接：LEFT OUTER JOIN， 以左表为主，先查询出左表，按照ON后的关联条件匹配右表，没有匹配到的用NULL填充，可以简写成LEFT JOIN
 
 2、右外连接：RIGHT OUTER JOIN， 以右表为主，先查询出右表，按照ON后的关联条件匹配左表，没有匹配到的用NULL填充，可以简写成RIGHT JOIN
 
-##### 联合查询（UNION与UNION ALL）
+#### 联合查询（UNION与UNION ALL）
 
 1、就是把多个结果集集中在一起，UNION前的结果为基准，需要注意的是联合查询的列数要相等，相同的记录行会合并
 
@@ -281,23 +281,23 @@ MyISAM存储引擎使用B+Tree作为索引结构，叶节点的data域存放的�
 
 3、效率 UNION 高于 UNION ALL
 
-##### 全连接（FULL JOIN）
+#### 全连接（FULL JOIN）
 
 1、mysql不支持全连接
 
 2、可以使用LEFT JOIN 和UNION和RIGHT JOIN联合使用
 
-##### 嵌套查询
+#### 嵌套查询
 
 用一条SQL语句得结果作为另外一条SQL语句得条件，效率不好把握
 
-#### 19：UNION与UNION ALL的区别？
+### 19：UNION与UNION ALL的区别？
 
 1、如果使用UNION ALL，不会合并重复的记录行
 
 2、效率 UNION 高于 UNION ALL
 
-#### 20：如何查找查询速度慢的原因
+### 20：如何查找查询速度慢的原因
 
 记录慢查询日志，分析查询日志，不要直接打开慢查询日志进行分析，这样比较浪费时间和精力，可以使用pt-query-digest工具进行分析
 
@@ -347,7 +347,7 @@ show processlist
 
 ### 查询优化的一些方法
 
-#### 优化查询过程中的数据访问
+### 优化查询过程中的数据访问
 
 1、访问数据太多导致查询性能下降
 
@@ -375,7 +375,7 @@ show processlist
 
 13、重写SQL语句，让优化器可以以更优的方式执行查询。
 
-#### 优化长难的查询语句
+### 优化长难的查询语句
 
 1、一个复杂查询还是多个简单查询
 
@@ -399,7 +399,7 @@ show processlist
 
 11、较少冗余记录的查询。
 
-#### 优化特定类型的查询语句
+### 优化特定类型的查询语句
 
 1、count(*)会忽略所有的列，直接统计所有列数，不要使用count(列名)
 
@@ -413,13 +413,13 @@ show processlist
 
 6、使用缓存
 
-#### 优化关联查询
+### 优化关联查询
 
 1、确定ON或者USING子句中是否有索引。
 
 2、确保GROUP BY和ORDER BY只有一个表中的列，这样mysql才有可能使用索引。
 
-#### 优化子查询
+### 优化子查询
 
 1、用关联查询替代
 
@@ -433,13 +433,13 @@ show processlist
 
 6、WITH ROLLUP超级聚合，可以挪到应用程序处理
 
-#### 优化LIMIT分页
+### 优化LIMIT分页
 
 1、LIMIT偏移量大的时候，查询效率较低
 
 2、可以记录上次查询的最大ID，下次查询时直接根据该ID来查询
 
-#### 优化UNION查询
+### 优化UNION查询
 
 UNION ALL的效率高于UNION
 

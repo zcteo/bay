@@ -43,7 +43,7 @@
 
   * [Docker & docker-compose](blog/Skill/Docker.md)
 
-  * [MySQL安装](blog/Skill/MySQL.md)
+  * [Google play store 安装方法](blog/Skill/GooglePlayStore.md)
 
   * [MySQL常见问题及优化](blog/Skill/MySql常见问题及优化.md)
 
