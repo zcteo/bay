@@ -31,6 +31,8 @@
 
   * [CLion 远程调试 Linux](blog/Linux/008_CLion远程调试Linux.md)
 
+  * [QEMU 模拟器定制根文件系统](blog/Linux/009_QEMU模拟器制作根文件系统.md)
+
 * QT
 
   * [Linux 安装 QT](blog/QT/001_Linux安装QT.md)

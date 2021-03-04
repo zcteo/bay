@@ -301,8 +301,8 @@ sudo mount /dev/loop7 rootfs/
 拷贝两个分区的文件
 
 ```bash
-sudo cp -r /mnt/boot/* ./boot/
-sudo cp -r /mnt/rootfs/* ./rootfs/
+sudo cp -a /mnt/boot/* ./boot/
+sudo cp -a /mnt/rootfs/* ./rootfs/
 ```
 
 拷贝完成后做一下清理工作
