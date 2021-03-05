@@ -62,9 +62,33 @@ echo 'ubuntu' > /etc/hostname
 
 设置 DNS
 
-```bash
-echo 'nameserver 180.76.76.76' > /etc/resolv.conf
-```
+> 临时生效
+>
+> ```bash
+> echo 'nameserver 180.76.76.76' > /etc/resolv.conf
+> ```
+>
+> 永久生效
+>
+> > ```bash
+> > vim /etc/systemd/resolved.conf
+> > ```
+> > 
+> > 在 [Resolve] 节点下增加
+> > 
+> > ```ini
+> > DNS=180.76.76.76 8.8.8.8
+> > ```
+> > 
+> >  重启
+>
+> 查看 DNS 
+>
+> ```bash
+>resolvectl status
+> ```
+> 
+
 
 设置本机解析
 
