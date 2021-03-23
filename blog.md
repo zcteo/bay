@@ -33,6 +33,8 @@
 
   * [QEMU 模拟器定制根文件系统](blog/Linux/009_QEMU模拟器制作根文件系统.md)
 
+  * [Ubuntu 20.04 更换内核踩坑](blog/Linux/010_Ubuntu更换内核踩坑.md)
+
 * QT
 
   * [Linux 安装 QT](blog/QT/001_Linux安装QT.md)
