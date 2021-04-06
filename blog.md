@@ -9,6 +9,14 @@
 
   * [CMake 管理多项目](blog/CMake/002_CMake管理多项目.md)
 
+  * [Eclipse 使用 CMake 构建项目](blog/CMake/003_Eclipse使用CMake.md)
+
+  * [VS Code 使用 CMake 构建项目](blog/CMake/004_VSCode使用CMake.md)
+
+* CXX
+
+  * [Linux C/C++ 开发环境搭建](blog/CXX/001_LinuxC开发环境搭建.md)
+
 * Goland
 
   * [Go语言开发环境准备](blog/Goland/001_Go语言开发环境准备.md)

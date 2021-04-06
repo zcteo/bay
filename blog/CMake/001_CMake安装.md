@@ -65,27 +65,27 @@ cmake 会默认安装在 /usr/local/bin 下面
 
 ## 实例
 
-### CMake版Hello World
+### CMake 版 Hello World
 
 **源文件**
 
 CMakeLists.txt
 
 ```cmake
-cmake_minimum_required(VERSION 3.17)
-
+# 要求的CMake最小版本
+cmake_minimum_required(VERSION 3.12)
+# 项目名称
 project(Hello)
-
+# C++标准
 set(CMAKE_CXX_STANDARD 11)
-
-add_executable(Hello main.cpp)
+# 生成可执行文件
+add_executable(${PROJECT_NAME} main.cpp)
 ```
 
 main.cpp
 
-```c++
+```cpp
 #include <iostream>
-
 int main()
 {
     std::cout << "Hello, World!" << std::endl;
