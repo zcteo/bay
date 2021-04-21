@@ -1,6 +1,6 @@
 ### CXX CSharp Java调用CXX DLL
 
-[TOC]
+[toc]
 
 #### 导出C++ Dll
 
@@ -23,7 +23,7 @@ extern "C" _declspec(dllexport) float _stdcall Avg(int i, int j);
 
 exportdll.cpp
 
-```C++
+```cpp
 #include "exportdll.h"
 int Add(int i, int j)
 {
@@ -46,7 +46,7 @@ float _stdcall Avg(int i, int j);
 
 exportdll.cpp
 
-```C++
+```cpp
 #include "exportdll.h"
 int Add(int i, int j)
 {
@@ -83,7 +83,7 @@ _stdcall也可以在项目属性 -> C/C++ -> 高级 -> 调用约定处指定
 
 第五行可能会出错E0167 "const char *" 类型的实参与 "LPCWSTR" 类型的形参不兼容，项目属性 -> 高级 -> 字符集选择"使用多字节字符集”
 
-```C++
+```cpp
 // MinGW注意头文件手动指定为Windows.h
 int main()
 {
@@ -111,7 +111,7 @@ int main()
 
  CallingConvention为StdCall可以不用指定
 
-```C#
+```csharp
 class Program
 {
     [DllImport("exportdll.dll", CallingConvention = CallingConvention.StdCall)]
@@ -191,6 +191,3 @@ public class DllImport {
     }
 }
 ```
-
-
-

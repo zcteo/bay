@@ -15,11 +15,13 @@
 
 * CXX
 
-  * [Linux C/C++ 开发环境搭建](blog/CXX/001_LinuxC开发环境搭建.md)
+  * [Linux C/C++ 开发环境搭建](blog/CXX/001_Linux下C开发环境搭建.md)
+
+  * [CLion 远程开发](blog/CXX/002_CLion远程开发.md)
 
 * Goland
 
-  * [Go语言开发环境准备](blog/Goland/001_Go语言开发环境准备.md)
+  * [Go 语言开发环境准备](blog/Goland/001_Go语言开发环境准备.md)
 
 * Linux
 

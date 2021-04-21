@@ -1,5 +1,7 @@
 # Linux C/C++ 开发环境搭建
 
+[toc]
+
 ## 引言
 
 Windows 下 C/C++ 开发可以直接用宇宙第一 IDE Visual Studio；但是 Linux 下就不能用了
