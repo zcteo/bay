@@ -21,6 +21,8 @@
 
   * [C 可变参数宏](blog/CXX/003_可变参数宏.md)
 
+  * [C++11 中的字面量](blog/CXX/004_CXX字面量.md)
+
 * Goland
 
   * [Go 语言开发环境准备](blog/Goland/001_Go语言开发环境准备.md)
