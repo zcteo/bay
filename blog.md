@@ -19,6 +19,8 @@
 
   * [CLion 远程开发](blog/CXX/002_CLion远程开发.md)
 
+  * [C 可变参数宏](blog/CXX/003_可变参数宏.md)
+
 * Goland
 
   * [Go 语言开发环境准备](blog/Goland/001_Go语言开发环境准备.md)
