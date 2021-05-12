@@ -1,16 +1,16 @@
-## 安卓 NDK native 方法 crash 定位分析
+# 安卓 NDK native 方法 crash 定位分析
 
-### addr2line工具
+## addr2line工具
 
 在 ndk/toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64/bin 目录下
 
-#### 用法
+### 用法
 
 ```bash
 addr2line [OPTIONS] addr [addr ...]
 ```
 
-#### OPTIONS
+### OPTIONS
 
 ```bash
 -a --addresses：在函数名、文件和行号信息之前，显示地址，以十六进制形式
@@ -28,9 +28,9 @@ addr2line [OPTIONS] addr [addr ...]
 
 
 
-### 定位 crash 代码行号
+## 定位 crash 代码行号
 
-#### Jni crash log 分析
+### Jni crash log 分析
 
 Jni crash 会在 DEBUG Tag 输出信息
 
@@ -66,7 +66,7 @@ Jni crash 会在 DEBUG Tag 输出信息
 
 第 23 行表示开始 crash，address 为  00000000000009a4
 
-#### 使用 addr2line 定位行号
+### 使用 addr2line 定位行号
 
 ```bash
 addr2line -e libneondemo.so -f -C  00000000000009a4
@@ -74,7 +74,7 @@ addr2line -e libneondemo.so -f -C  00000000000009a4
 
 
 
-### 参考文章
+## 参考文章
 
 1. [ndk addr2line工具的使用](https://www.jianshu.com/p/c2e2b8f8ea0d)
 
@@ -83,4 +83,10 @@ addr2line -e libneondemo.so -f -C  00000000000009a4
 
 
 
+
+
+***
+*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
+
+*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
 

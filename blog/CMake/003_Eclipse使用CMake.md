@@ -28,3 +28,13 @@ Eclipse IDE for C/C++ Developers
 
 > 手动在 CMakeLists.txt 加上 ```set(CMAKE_BUILD_TYPE Debug)```；暂时没找到其他更好的解决方案
 
+
+
+
+
+
+***
+*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
+
+*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
+

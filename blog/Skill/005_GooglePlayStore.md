@@ -38,3 +38,14 @@ google play service 下载地址：
 google play store下载地址：
 
 <https://www.apkmirror.com/apk/google-inc/google-play-store/>
+
+
+
+
+
+
+***
+*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
+
+*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
+

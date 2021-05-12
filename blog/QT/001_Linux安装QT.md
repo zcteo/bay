@@ -2,9 +2,13 @@
 
 [TOC]
 
-## 下载
+## 离线安装版
 
-### Qt 官方下载
+离线安装没有 Arm 架构的，且 5.15 版本开始就不提供离线安装包了
+
+### 下载
+
+#### Qt 官方下载
 
 地址：<http://download.qt.io/>
 
@@ -12,7 +16,7 @@
 
 
 
-### 国内镜像下载
+#### 国内镜像站下载
 
 国内著名的几个 Qt 镜像网站
 
@@ -44,7 +48,7 @@
 
 
 
-## 安装
+### 安装
 
 给安装包赋予运行权限
 
@@ -76,31 +80,93 @@ chmod +x qt-opensource-linux-x64-5.12.7.run
 
 
 
-安装完成之后，需要修改default.conf，执行
+#### 安装后配置
+
+安装完成，修改default.conf，执行
 
 ```bash
 sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf
 ```
 
-将第一行改为自己安装路径下的bin目录的路径，第二行改为Qt5.12.3目录的路径，下面是我的配置
+将第一行改为自己安装路径下的 bin 目录的路径，第二行改为 Qt 目录的路径，下面是我的配置
 
-```
+```bash
 /opt/app/Qt5.12.7/5.12.7/gcc_64/bin
 /opt/app/Qt5.12.7
 ```
 
 
 
-### 使用 CMake 可能出现的问题
+## 源码编译安装
+
+Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些情况下我们并没有相应的网络环境适合在线安装，或者我们使用的处理器架构没有预编译的二进制文件，这时候就不得不学习离线安装了；这里以长期支持版5.15.2为例
+
+### 下载源码
+
+具体下载地址和层级说明参考[离线安装版 -> 下载](#下载)
+
+按照如图所示地址选择并下载 qt-everywhere-src-\*.\*.\*.tar.xz
+
+![06](img/001/06.png)
+
+### 编译安装
+
+一般开源代码编译安装都是相同的流程：**config, make, make install**
+
+**config**
+
+指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译
+
+```bash
+./configure -prefix /opt/app/qt-5.12.9 -nomake tests -nomake examples
+```
+
+config 的过程中会让选开源版还是商业版，然后还有一个同意开源协议，漫长的等待后就会看到以下结果：虽说程序员从不关心 warning，但有些时候还是可以注意一下下，根据提示安装缺少的依赖
+
+```bash
+sudo apt install gperf
+sudo apt install libnss3-dev
+sudo apt install libdbus-1-dev
+sudo apt install libfontconfig1-dev
+sudo apt install libxcb-xfixes0-dev
+sudo apt install libxkbcommon-dev
+sudo apt install xorg-dev
+```
+
+![07](img/001/07.png)
+
+**make**
+
+```bash
+make -j$(nproc)
+```
+
+这个就是更漫长的等待了
+
+**make install**
+
+```bash
+sudo make install
+```
+
+
+
+## 第一次使用可能出现的问题
 
 **Failed to find "GL/gl.h" in "/usr/include/libdrm"**
 
 解决方案
 
 ```bash
-sudo apt update
 sudo apt install mesa-common-dev -y
 ```
+
+
+
+---
+*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
+
+*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
 
 
 

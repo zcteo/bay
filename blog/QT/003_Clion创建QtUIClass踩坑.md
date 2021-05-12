@@ -65,3 +65,8 @@ File -> setting -> Editor -> File and Code Template，找到 Qt Designer Form；
 
 
 
+***
+*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
+
+*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
+

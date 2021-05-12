@@ -19,9 +19,11 @@
 
   * [CLion 远程开发](blog/CXX/002_CLion远程开发.md)
 
-  * [C 可变参数宏](blog/CXX/003_可变参数宏.md)
+  * [C++ C Java 调用 C++ DLL](blog/CXX/003_CXXCSharpJava调用CXXDLL.md)
 
   * [C++11 中的字面量](blog/CXX/004_CXX字面量.md)
+
+  * [C 可变参数宏](blog/CXX/005_可变参数宏.md)
 
 * Goland
 
@@ -61,15 +63,13 @@
 
 * Skill
 
-  * [CXX CSharp Java调用CXX DLL](blog/Skill/001_CXXCSharpJava调用CXXDLL.md)
+  * [Docker & docker-compose](blog/Skill/001_Docker.md)
 
-  * [Docker & docker-compose](blog/Skill/002_Docker.md)
+  * [安卓 NDK native 方法 crash 定位分析](blog/Skill/002_安卓NDKnative方法crash定位分析.md)
 
   * [MySQL常见问题及优化](blog/Skill/003_MySql常见问题及优化.md)
 
   * [VS2017 & VS2019 创建离线安装包](blog/Skill/004_VS2019VS2019创建离线安装包.md)
 
-  * [安卓 NDK native 方法 crash 定位分析](blog/Skill/005_安卓NDKnative方法crash定位分析.md)
-
-  * [Google play store 安装方法](blog/Skill/006_GooglePlayStore.md)
+  * [Google play store 安装方法](blog/Skill/005_GooglePlayStore.md)
 
