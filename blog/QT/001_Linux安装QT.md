@@ -99,7 +99,7 @@ sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf
 
 ## 源码编译安装
 
-Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些情况下我们并没有相应的网络环境适合在线安装，或者我们使用的处理器架构没有预编译的二进制文件，这时候就不得不学习离线安装了；这里以长期支持版5.15.2为例
+Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些情况下我们并没有相应的网络环境适合在线安装，或者我们使用的处理器架构没有预编译的二进制文件，这时候就不得不学习离线安装了；这里以长期支持版5.12.10为例
 
 ### 下载源码
 
@@ -115,22 +115,36 @@ Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些�
 
 **config**
 
-指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译
+指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译；webengine 太难编了，反正目前用不到，等以后有机会再编译
 
 ```bash
-./configure -prefix /opt/app/qt-5.12.9 -nomake tests -nomake examples
+./configure -prefix /opt/qt-5.12.10 -qt-xcb -fontconfig -system-freetype \
+            -nomake tests -nomake examples -skip webengine
 ```
+
+在桌面系统，上面的 `-qt-xcb -fontconfig -system-freetype` 选项一定要加，第一个不加 UI 程序起不来，后面两个不加就不显示字体
+
+ `-fontconfig` 不能和  `-qt-freetype` 搭配，会出现以下报错 ，大概意思就是要用 `-system-freetype`
+
+> ERROR: Feature 'fontconfig' was enabled, but the pre-condition '!config.msvc && features.system-freetype && libs.fontconfig' failed.
 
 config 的过程中会让选开源版还是商业版，然后还有一个同意开源协议，漫长的等待后就会看到以下结果：虽说程序员从不关心 warning，但有些时候还是可以注意一下下，根据提示安装缺少的依赖
 
 ```bash
-sudo apt install gperf
-sudo apt install libnss3-dev
-sudo apt install libdbus-1-dev
+# 这是QT官网推荐的
+sudo apt install libfontconfig1-dev libfreetype6-dev\
+     libx11-dev libxext-dev libxfixes-dev libxi-dev\
+     libxrender-dev libxcb1-dev libx11-xcb-dev\
+     libxcb-glx0-dev libxkbcommon-x11-dev
+     
+# 这是我在ubuntu 20.04上面根据警告和错误日志安装的
+sudo apt install build-essential
+sudo apt install libxkbcommon-x11-dev
+sudo apt install libx11-dev
 sudo apt install libfontconfig1-dev
-sudo apt install libxcb-xfixes0-dev
-sudo apt install libxkbcommon-dev
-sudo apt install xorg-dev
+sudo apt install mesa-common-dev
+sudo apt install libdbus-1-dev
+sudo apt install libclang-dev
 ```
 
 ![07](img/001/07.png)
@@ -155,7 +169,7 @@ sudo make install
 
 **Failed to find "GL/gl.h" in "/usr/include/libdrm"**
 
-解决方案
+如果是自己编译的不会有这个问题，因为之前装过了
 
 ```bash
 sudo apt install mesa-common-dev -y

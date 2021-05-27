@@ -13,6 +13,12 @@
 
   * [VS Code 使用 CMake 构建项目](blog/CMake/004_VSCode使用CMake.md)
 
+  * [使用 CMake 生成动态库/静态库](blog/CMake/005_CMake生成库文件.md)
+
+  * [CMake 安装动态库并生成 XxxConfig.cmake 文件](blog/CMake/006_CMake安装动态库.md)
+
+  * [CMake 运行 CTest 进行测试](blog/CMake/007_CMake测试.md)
+
 * CXX
 
   * [Linux C/C++ 开发环境搭建](blog/CXX/001_Linux下C开发环境搭建.md)
@@ -50,6 +56,8 @@
   * [QEMU 模拟器定制根文件系统](blog/Linux/009_QEMU模拟器制作根文件系统.md)
 
   * [Ubuntu 20.04 更换内核踩坑](blog/Linux/010_Ubuntu更换内核踩坑.md)
+
+  * [Ubuntu 20.04 安装百度输入法](blog/Linux/011_Ubuntu安装百度输入法.md)
 
 * QT
 
