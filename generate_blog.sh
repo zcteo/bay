@@ -1,9 +1,16 @@
 #!/bin/bash
 printf "Generating blog.md... \n"
+
+# 先检查文章有没有更新，节省一点时间
+article_update=$(git diff --cached --name-only --grep blog/*/*.md)
+if [ ! "$article_update" ]; then
+    echo 'Skip generating blog.md... '
+    exit 0
+fi
+
 file_name=$(pwd)/blog.md
 rm -f "$file_name"
 tmp=$(pwd)/tmp
-
 cd blog || exit 1
 dirs=$(ls)
 
@@ -12,7 +19,6 @@ printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
 echo '---' >>"$file_name"
 
 for dir in $dirs; do
-
     if [ -f "$dir" ] || [ "$dir" = "SaveOnly" ]; then
         continue
     else
