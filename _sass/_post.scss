@@ -38,28 +38,45 @@
   margin-bottom: $spacing-unit;
   width: 100%;
 
-  h2 {
-    font-size: 32px;
+  h1 {
+    font-size: 33px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+
+    font-family: $base-font-family;
 
     @include media-query($on-mobile) {
-      font-size: 28px;
+      font-size: 26px;
+    }
+  }
+
+  h2 {
+    font-size: 29px;
+
+    @include media-query($on-mobile) {
+      font-size: 23px;
     }
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 24px;
 
     @include media-query($on-mobile) {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 19px;
 
     @include media-query($on-mobile) {
-      font-size: 18px;
+      font-size: 17px;
     }
+  }
+
+  hr {
+    margin-top: 44px;
+    margin-bottom: 22px;
   }
 }
 

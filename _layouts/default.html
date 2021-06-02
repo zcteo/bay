@@ -8,11 +8,13 @@
 
   <div class="page-content">
     <div class="wrapper">
-      {{ content }}
+      <article class="post-content">
+        {{ content }}
+      </article>
     </div>
     <!-- valine 评论系统 -->
     {% if site.valine.enable %}
-    <div id="valineComments" class="wrapper"></div>
+    <div id="valineComments" class="wrapper" style="margin-top: 44px; margin-bottom: 22px"></div>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script>
       new Valine({
