@@ -46,31 +46,31 @@
     font-family: $base-font-family;
 
     @include media-query($on-mobile) {
-      font-size: 26px;
+      font-size: 25px;
     }
   }
 
   h2 {
-    font-size: 29px;
+    font-size: 28px;
 
     @include media-query($on-mobile) {
-      font-size: 23px;
+      font-size: 22px;
     }
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 23px;
 
     @include media-query($on-mobile) {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
 
   h4 {
-    font-size: 19px;
+    font-size: 18px;
 
     @include media-query($on-mobile) {
-      font-size: 17px;
+      font-size: 16px;
     }
   }
 

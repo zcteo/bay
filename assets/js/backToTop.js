@@ -3,10 +3,10 @@ window.onload = function () {
     //文档高度
     var clientHeight = document.documentElement.clientHeight;
     var time = null;
-    var isTop = true,
-        cancelScroll = false;
-    window.onscroll = function () {
+    var isTop = true;
+    var cancelScroll = false;
 
+    window.onscroll = function () {
         var osTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (osTop >= clientHeight) {
             backToTop.style.display = 'block';
