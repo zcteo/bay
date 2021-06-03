@@ -19,6 +19,8 @@
 
   * [CMake 运行 CTest 进行测试](blog/CMake/007_CmakeCTest.md)
 
+  * [!/bin/bash](blog/CMake/covertImgUrl.sh)
+
 * CXX
 
   * [Linux C/C++ 开发环境搭建](blog/CXX/001_LinuxCxxDevelopmentEnvironment.md)

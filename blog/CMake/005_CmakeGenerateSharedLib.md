@@ -89,7 +89,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 再看看最开始那个  CMakeLists.txt 生成的文件对比一下
 
-![image-20210513215736394](img/005/02.png)
+![02](img/005/02.png)
 
 
 
