@@ -50,7 +50,7 @@ ctest # 或者make test
 
 ### 看结果
 
-![image-20210516202826610](img/006/01.png)
+![01](img/007/01.png)
 
 ### `add_test` 命令
 
