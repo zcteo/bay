@@ -1,5 +1,7 @@
 # 使用 CMake 生成动态库/静态库
 
+[toc]
+
 ## 先看例子
 
 废话不多说，上 CMakeLists.txt

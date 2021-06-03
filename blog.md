@@ -25,7 +25,7 @@
 
   * [CLion 远程开发](blog/CXX/002_CLionRemoteDevelopment.md)
 
-  * [C++ C Java 调用 C++ DLL](blog/CXX/003_CxxCsharpJavaCallCxxlib.md)
+  * [C++ CSharp Java 调用 C++ DLL](blog/CXX/003_CxxCsharpJavaCallCxxlib.md)
 
   * [C++11 中的字面量](blog/CXX/004_CxxVariousStringAndCharacterTypes.md)
 

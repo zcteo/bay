@@ -1,8 +1,8 @@
-### C++ C# Java 调用 C++ DLL
+# C++ CSharp Java 调用 C++ DLL
 
 [toc]
 
-#### 导出C++ Dll
+## 导出C++ Dll
 
 C++编译器为VS2019
 
@@ -12,7 +12,7 @@ C++导出函数接口的方式主要有两种：
 
 ***_stdcall可以在项目属性 -> C/C++ -> 高级 -> 调用约定处指定，就不用在每个函数前指定了***
 
-##### 在函数定义时候加extern "C" _declspec(dllexport)
+### 在函数定义时候加extern "C" _declspec(dllexport)
 
 exportdll.h
 
@@ -25,21 +25,23 @@ exportdll.cpp
 
 ```cpp
 #include "exportdll.h"
+
 int Add(int i, int j)
 {
-	return i + j;
+    return i + j;
 }
+
 float Avg(int i, int j)
 {
-	return (i + j) / 2.0f;
+    return (i + j) / 2.0f;
 }
 ```
 
-##### 使用模块定义文件（.def）声明
+### 使用模块定义文件（.def）声明
 
 exportdll.h
 
-```C++
+```cpp
 int _stdcall Add(int i, int j);
 float _stdcall Avg(int i, int j);
 ```
@@ -48,13 +50,15 @@ exportdll.cpp
 
 ```cpp
 #include "exportdll.h"
+
 int Add(int i, int j)
 {
-	return i + j;
+    return i + j;
 }
+
 float Avg(int i, int j)
 {
-	return (i + j) / 2.0f;
+    return (i + j) / 2.0f;
 }
 ```
 
@@ -73,11 +77,11 @@ EXPORTS
 
  ==CMake+MinGW好像不能使用def，只需要加上extern "C"==
 
-#### 简单调用C++ DLL
+## 简单调用C++ DLL
 
 ***均为基本数据类型的调用，复杂的数据类型会涉及到转换对应关系***
 
-##### C++动态调用
+### C++动态调用
 
 _stdcall也可以在项目属性 -> C/C++ -> 高级 -> 调用约定处指定
 
@@ -87,27 +91,27 @@ _stdcall也可以在项目属性 -> C/C++ -> 高级 -> 调用约定处指定
 // MinGW注意头文件手动指定为Windows.h
 int main()
 {
-	typedef int(_stdcall* AddFun)(int, int);
-	typedef float(_stdcall* AvgFun)(int, int);
-	HINSTANCE dll = LoadLibrary("exportdll.dll");
-	if (dll != NULL) 
+    typedef int(_stdcall *AddFun)(int, int);
+    typedef float(_stdcall *AvgFun)(int, int);
+    HINSTANCE dll = LoadLibrary("exportdll.dll");
+    if (dll != NULL)
     {
-		AddFun Add = (AddFun)GetProcAddress(dll, "Add");
-		if (Add != NULL) 
+        AddFun Add = (AddFun) GetProcAddress(dll, "Add");
+        if (Add != NULL)
         {
-			cout << Add(3, 4) << endl;
-		}
-		AvgFun Avg = (AvgFun)GetProcAddress(dll, "Avg");
-		if (Avg != NULL) 
+            cout << Add(3, 4) << endl;
+        }
+        AvgFun Avg = (AvgFun) GetProcAddress(dll, "Avg");
+        if (Avg != NULL)
         {
-			cout << Avg(3, 4) << endl;
-		}
-	}
+            cout << Avg(3, 4) << endl;
+        }
+    }
     return 0;
 }
 ```
 
-##### C#调用
+### C#调用
 
  CallingConvention为StdCall可以不用指定
 
@@ -126,7 +130,7 @@ class Program
 }
 ```
 
-#####  Java调用
+###  Java调用
 
 Java调用C++主要有三种方法：
 
