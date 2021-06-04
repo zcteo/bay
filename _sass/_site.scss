@@ -2,6 +2,9 @@
   float: right;
   border: #ccc 1px solid;
   margin-left: 20px;
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
 
   @include media-query($on-mobile) {
     float: none;

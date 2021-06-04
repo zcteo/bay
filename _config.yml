@@ -21,19 +21,17 @@ footer:
   follow:
     - name: GitHub
       link: https://github.com/zcteo
-    - name: CSDN
-      link: https://blog.csdn.net/zcteo
-    - name: jianshu
-      value: 简书
-      link: https://www.jianshu.com/u/031f77f21bd3
     - name: WeiBo
-      value: 微博
       link: https://weibo.com/u/6664803739
     - name: Twitter
       link: https://twitter.com/zcteo
       username: "@zcteo"
     - name: Facebook
       link: https://facebook.com/zcteo
+    - name: CSDN
+      link: https://blog.csdn.net/zcteo
+    - name: JianShu
+      link: https://www.jianshu.com/u/031f77f21bd3
 
 # 评论系统
 valine:
