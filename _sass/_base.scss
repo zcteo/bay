@@ -147,10 +147,9 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #333333;
+  border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #333333;
-  color: #B8BFC6;
+  background-color: #eef;
 }
 
 code {

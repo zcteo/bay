@@ -16,10 +16,18 @@ footer:
     - name: WeChat
       value: EricTeo-
       link: "#"
+    - name: Telegram
+      link: https://t.me/zcteo6
   follow:
     - name: GitHub
       link: https://github.com/zcteo
+    - name: CSDN
+      link: https://blog.csdn.net/zcteo
+    - name: jianshu
+      value: 简书
+      link: https://www.jianshu.com/u/031f77f21bd3
     - name: WeiBo
+      value: 微博
       link: https://weibo.com/u/6664803739
     - name: Twitter
       link: https://twitter.com/zcteo
