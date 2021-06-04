@@ -95,7 +95,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 ## 对外提供动态库
 
-请参考[《CMake 安装动态库并生成 XxxConfig.cmake 文件》](006_CMake安装动态库.md)
+请参考[《CMake 安装动态库并生成 XxxConfig.cmake 文件》](006_CmakeInstallSharedLib.md)
 
 
 

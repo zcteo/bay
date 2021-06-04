@@ -4,7 +4,7 @@
 
 ## 引言
 
-之前说了一下[《使用 CMake 生成动态库/静态库》](005_CMake生成库文件.md)，既然写了动态库，那肯定是要提供给别人调用的，我们就来看看要怎么调用
+之前说了一下[《使用 CMake 生成动态库/静态库》](005_CmakeGenerateLib.md)，既然写了动态库，那肯定是要提供给别人调用的，我们就来看看要怎么调用
 
 写过 cmake 的都应该知道，cmake 通过 find_package 去找动态库，find_package 会去调用 XxxConfig.cmake 或 xxx-config.cmake 或 FindXxx.cmake 文件去找动态库，上述文件出现的顺序就是调用的优先级，前两个文件一般是库作者提供的，后一个主要用于库作者没提供前两个文件的时候我们自己编写一个给 find_package 调用。
 

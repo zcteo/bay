@@ -11,18 +11,31 @@ for file in $files; do
     else
         echo "正在转换$file"
     fi
-    
+
     awk '{
-            if(match($0,/(!\[.*?\])\((.*?)\)/,a))
+            if(match($0,/!\[(.*?)\]\((.*?)\)/,a))
             {
                 dir = "'"$parentDir/"'"
                 githubUrl = "https://raw.githubusercontent.com/zcteo/zcteo.github.io/master/blog/"
-                newUrl = a[1] "" "(" "" githubUrl "" dir "" a[2]"" ")";
-                print newUrl;
+                newUrl = githubUrl "" dir "" a[2]
+                print "<img src=\"" "" newUrl "" "\" alt=\"" "" a[1] "" "\"/>"
             }
             else
             {
                 print $0
             }
         }' "$file" >>".public/$file"
+
+    dep=$(awk '/.*\.md)/{print}' "$file")
+    if [ "$dep" ]; then
+        {
+            echo "$file"
+            echo "$dep"
+            echo ''
+        } >>".public/dep.txt"
+    fi
 done
+
+if [ -e ".public/dep.txt" ]; then
+    cat ".public/dep.txt"
+fi

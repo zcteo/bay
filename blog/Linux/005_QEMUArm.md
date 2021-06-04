@@ -126,7 +126,7 @@ qemu-system-arm -M vexpress-a9 -m 256 -kernel u-boot -nographic
 
 ## 编译内核并仿真
 
-**编译内核可以参考另一篇文章 [Linux_x86_64 内核编译](003_编译内核.md)**
+**编译内核可以参考另一篇文章 [《Linux_x86_64 内核编译》](003_CompileKernel.md)**
 
 ### 下载源码
 

@@ -13,7 +13,7 @@
 
   * [VS Code 使用 CMake 构建项目](blog/CMake/./004_CmakeVScode.md)
 
-  * [使用 CMake 生成动态库/静态库](blog/CMake/./005_CmakeGenerateSharedLib.md)
+  * [使用 CMake 生成动态库/静态库](blog/CMake/./005_CmakeGenerateLib.md)
 
   * [CMake 安装动态库并生成 XxxConfig.cmake 文件](blog/CMake/./006_CmakeInstallSharedLib.md)
 

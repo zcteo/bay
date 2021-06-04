@@ -87,7 +87,6 @@ echo 'ubuntu' > /etc/hostname
 > ```bash
 >resolvectl status
 > ```
-> 
 
 
 设置本机解析
@@ -148,7 +147,7 @@ exit
 
 
 
-***制作文件镜像请参考[将已有 Linux 系统做成 img 镜像](001_将已有Linux系统做成img镜像.md)***
+**制作文件镜像请参考[《将已有 Linux 系统做成 img 镜像》](001_LinuxSystemToImage.md)**
 
 
 

@@ -89,9 +89,9 @@ CMake 可以脱离 IDE 构建项目，目前大部分常用的 IDE 直接支持 
 
 **CMake介绍和简单使用**
 
-[《CMake 安装》](../CMake/001_CMake安装.md)
+[《CMake 安装》](../CMake/001_InstallCMake.md)
 
-[《CMake 管理多项目》](../CMake/002_CMake管理多项目.md)
+[《CMake 管理多项目》](../CMake/002_CmakeMultiproject.md)
 
 
 
@@ -103,7 +103,7 @@ Linux 下常用的 C/C++ IDE 还是比较多的；我这里主要介绍一下 qt
 
 本文介绍单独安装
 
-与 Qt 一起安装请参考[《Linux 安装 QT》](../QT/001_Linux安装QT.md)
+与 Qt 一起安装请参考[《Linux 安装 QT》](../QT/001_InstallQt.md)
 
 **下载**
 

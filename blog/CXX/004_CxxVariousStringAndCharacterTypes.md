@@ -51,7 +51,7 @@ int main()
 // 输出 4
 ```
 
-*PRINT宏定义可以参考上一篇文章[《C 可变参数宏》](003_可变参数宏.md)*
+*PRINT宏定义可以参考上一篇文章[《C 可变参数宏》](003_CxxCsharpJavaCallCxxlib.md)*
 
 
 
