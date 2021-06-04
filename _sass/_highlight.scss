@@ -1,12 +1,4 @@
-$codeColor:#B8BFC6;
-$commentColor:#DA924A;
-$errorColor:#a61717;
-$stringColor:#D26B6B;
-$numberColor:#64AB8F;
-$keywordColor:#C88FD0;
-$nameColor:#8D8DF0;
-
-.highlight  { background: #333333; color: $codeColor;}
+.highlight  { background: $codeBackgroundColor; color: $codeColor;}
 .highlight .p{ color: $codeColor}
 .highlight .n{ color: $codeColor}
 .highlight .c { color: $commentColor;  }/* Comment */
