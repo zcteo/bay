@@ -1,7 +1,7 @@
 #!/bin/bash
 file_name=$(pwd)/blog.md
 # 先检查文章有没有更新，节省一点时间
-article_update=$(git diff --cached --name-only --grep blog/*/*.md)
+article_update=$(git diff --cached --name-only | grep '.*\.md')
 if [ ! "$article_update" ] && [ -e "$file_name" ]; then
     echo 'Generating blog.md skipped... '
     exit 0

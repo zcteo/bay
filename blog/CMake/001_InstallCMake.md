@@ -42,6 +42,16 @@ CMake 官网提供了源码和二进制包
 
 ### 源码安装
 
+#### 安装依赖库
+
+目前我这就缺 OpenSSL
+
+```bash
+sudo apt install libssl-dev
+```
+
+#### 没有老版本CMake
+
 解压并在目录内打开命令行窗口，依次执行
 
 ```bash
@@ -51,9 +61,20 @@ sudo make install
 ```
 
 cmake 会默认安装在 /usr/local/bin 下面
-要改变安装路径，在bootstrap命令中加入'--prefix=PATH'选项。
+要改变安装路径，在 bootstrap 命令后加上 '--prefix=PATH' 选项。
 
+#### 有以前版本CMake
 
+解压并在目录内打开命令行窗口，依次执行
+
+```bash
+cmake 
+make
+sudo make install
+```
+
+cmake 会默认安装在 /usr/local/bin 下面
+要改变安装路径，在 cmake 命令后加上 '-DCMAKE_INSTALL_PREFIX=PATH' 选项。
 
 ### 验证安装是否成功
 
