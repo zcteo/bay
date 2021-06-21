@@ -69,6 +69,8 @@
 
   * [Linux Qt 使用搜狗输入法](blog/QT/./004_QtSogouPinyin.md)
 
+  * [编译安装 QtCreator](blog/QT/./005_CompileQtCreator.md)
+
 * Skill
 
   * [Docker & docker-compose](blog/Skill/./001_Docker.md)
