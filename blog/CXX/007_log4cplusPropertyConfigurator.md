@@ -17,7 +17,7 @@ log4cplus.rootLogger=TRACE,console,file,errorFile
 # 控制台Appender
 log4cplus.appender.console=log4cplus::ConsoleAppender
 log4cplus.appender.console.layout=log4cplus::PatternLayout
-log4cplus.appender.console.layout.ConversionPattern=%D{%Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n
+log4cplus.appender.console.layout.ConversionPattern=%D{ %Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n
 
 # 文件Appender
 log4cplus.appender.file=log4cplus::TimeBasedRollingFileAppender
@@ -29,7 +29,7 @@ log4cplus.appender.file.MaxHistory=1
 log4cplus.appender.file.CleanHistoryOnStart=true
 log4cplus.appender.file.RollOnClose=false
 log4cplus.appender.file.layout=log4cplus::PatternLayout
-log4cplus.appender.file.layout.ConversionPattern=%D{%Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n
+log4cplus.appender.file.layout.ConversionPattern=%D{ %Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n
 
 # 错误文件Appender
 log4cplus.appender.errorFile=log4cplus::TimeBasedRollingFileAppender
@@ -41,7 +41,7 @@ log4cplus.appender.errorFile.MaxHistory=365
 log4cplus.appender.errorFile.CleanHistoryOnStart=true
 log4cplus.appender.errorFile.RollOnClose=false
 log4cplus.appender.errorFile.layout=log4cplus::PatternLayout
-log4cplus.appender.errorFile.layout.ConversionPattern=%D{%Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n
+log4cplus.appender.errorFile.layout.ConversionPattern=%D{ %Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n
 ```
 
 每个 FileAppender 具体设置都不一样，需要区别对待；具体参考 fileappender.h 文件里面的注释

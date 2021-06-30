@@ -77,7 +77,7 @@ int main()
     consoleAppender->setLayout(std::unique_ptr<log4cplus::Layout>(new log4cplus::SimpleLayout));
     // 文件Appender
     log4cplus::SharedAppenderPtr fileAppender(new log4cplus::FileAppender("log.log",std::ios_base::app));
-    const char *pattern = "%D{%Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n";
+    const char *pattern = "%D{ %Y-%m-%d %H:%M:%S.%q} %5p %c: %m (%l)%n";
     fileAppender->setLayout(std::unique_ptr<log4cplus::Layout>(new log4cplus::PatternLayout(pattern)));
     // 获取实例
     auto logger = log4cplus::Logger::getInstance("test");
