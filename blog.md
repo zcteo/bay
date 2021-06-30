@@ -31,6 +31,10 @@
 
   * [C 可变参数宏](blog/CXX/./005_CxxVariableParameterMacro.md)
 
+  * [log4cplus 使用](blog/CXX/./006_log4cplus.md)
+
+  * [Log4cplus 配置文件](blog/CXX/./007_log4cplusPropertyConfigurator.md)
+
 * Goland
 
   * [Go 语言开发环境准备](blog/Goland/./001_DevelopmentEnvironment.md)
@@ -58,6 +62,8 @@
   * [Ubuntu 20.04 更换内核踩坑](blog/Linux/./010_UbuntuReplaceKernel.md)
 
   * [Ubuntu 20.04 安装百度输入法](blog/Linux/./011_UbuntuInstallBaiduPinyin.md)
+
+  * [Linux 创建交换文件 swapfile](blog/Linux/./012_LinuxCreateSwapfile.md)
 
 * QT
 
