@@ -115,9 +115,31 @@ log.log 文件
 
 
 
+## 控制台日志颜色
+
+使用 CLion 开发的话，可以使用插件 `Grep Console` 实现不同的日志级别对应不同的颜色。
+
+我自己的配色如下
+
+```bash
+等级    RGB颜色
+FATAL  CC666E
+ERROR  CC666E
+WARN   ABC023
+INFO   5394EC
+DEBUG  299999
+TRACE  999999
+```
+
+如果不是 CLion；Linux 终端配色方案可以参考[《ANSI 兼容终端颜色控制》](../Linux/013_LinuxConsoleColor.md)
+
+
+
 ## 小结
 
 这篇文章提到的都是用代码配置，每次改配置还需要重新编译代码。用过 log4j 的应该都知道使用配置文件配置是很灵活的，所以 lo4cplus 也是提供了通过配置文件配置的。具体使用方式请参考[《log4cplus配置文件》](007_log4cplusPropertyConfigurator.md)
+
+
 
 
 

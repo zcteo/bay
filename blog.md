@@ -65,6 +65,8 @@
 
   * [Linux 创建交换文件 swapfile](blog/Linux/./012_LinuxCreateSwapfile.md)
 
+  * [ANSI 兼容终端颜色控制](blog/Linux/./013_LinuxConsoleColor.md)
+
 * QT
 
   * [Linux 安装 QT](blog/QT/./001_InstallQt.md)
