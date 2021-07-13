@@ -1,10 +1,8 @@
-# Docker & docker-compose
+# Docker 安装与使用
 
 [TOC]
 
-## Docker
-
-### 国内镜像加速配置
+## 国内镜像加速配置
 
 1. [DaoCloud](https://www.daocloud.io/mirror)
 
@@ -32,7 +30,9 @@
    > <https://cr.console.aliyun.com/>
    > 首页点击”创建我的容器镜像“，得到一个专属的镜像加速地址
 
-### 基本命令
+
+
+## 基本命令
 
 ```bash
 # 安装
@@ -59,9 +59,12 @@ sudo docker search   #查找镜像
 sudo docker exec -it #以互动模式进入容器
 sudo docker logs -f  #查看指定容器的日志
 sudo docker build -t name:latest . #在当前目录根据Dockerfile创建名为name的镜像
+sudo docker container update --restart always #更改restart策略
 ```
 
-### 网络相关
+
+
+## 网络相关
 
 ```bash
 # 默认为bridge模式
@@ -73,7 +76,45 @@ sudo docker network rm
 sudo docker network inspect
 ```
 
-### Docker部署常用应用命令
+
+
+## Docker save/export
+
+docker save 用来将一个或多个image打包保存。
+
+docker save 也可以打包container，保存的是容器背后的image.
+
+如：将本地镜像库中的image1和image2打包到images.tar中
+
+```bash
+docker save -o images.tar  image1:v1 image2:v1
+# 保存的时候压缩
+docker save image1:v1 image2:v1 | gzip > images.tar.gz
+```
+
+docker load用于将打包的tar中包含的镜像load到本地镜像库，但不能重命名其中的镜像名。
+
+```bash
+docker load -i images.tar
+# load压缩镜像
+gzip -c images.tar.gz | docker load 
+```
+
+docker export 打包 container 文件系统
+
+```bash
+docker export -o thecontainer.tar container_name
+```
+
+使用 docker import 载入，可以为新镜像指定name和tag
+
+```bash
+docker import thecontainer.tar newimagename:tag
+```
+
+
+
+## Docker部署常用应用命令
 
 ```bash
 # 新建net
@@ -97,18 +138,9 @@ sudo docker run -d --name core -p8081:8081 --net mynet core
 sudo docker run -d --name store -p8080:8080 --net mynet store
 ```
 
-### Docker打包镜像
-
-```bash
-# 打包
-sudo docker save -o filename imagename
-# 导入
-sudo docker load < filename
-```
 
 
-
-### Dockerfile
+## Dockerfile
 
 ``` dockerfile
 # 基础镜像
@@ -126,107 +158,6 @@ ENV spring.profiles.active=docker
 # 进入时执行的命令，jvm设置为东八区
 ENTRYPOINT ["java","-Duser.timezone=GMT+8","-jar","/tmp/app.jar"]
 ```
-
-## docker-compose
-
-###  安装
-
-可以在[Github](https://github.com/docker/compose/releases)查看版本以及安装命令
-
-```bash
-# 安装
-sudo curl -L https://github.com/docker/compose/releases/download/1.23.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-# 赋权
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-### docker-compose.yml
-
-```yaml
-version: '3.7'
-services:
-    zookeeper:
-        image: zookeeper
-        container_name: zookeeper
-        ports: 
-            - 2181:2181
-            - 2888:2888
-            - 3888:3888
-        networks: 
-            - mynet
-    dubbo-admin:
-        image: riveryang/dubbo-admin
-        container_name: dubbo-admin
-        environment:
-            - DUBBO_REGISTRY=zookeeper:\/\/zookeeper:2181
-            - DUBBO_ROOT_PASSWORD=root
-        ports:
-            - 9600:8080
-        networks:
-            - mynet
-        depends_on:
-            - zookeeper
-    mysql:
-        image: mysql:5.7
-        container_name: mysql
-        environment:
-            - MYSQL_ROOT_PASSWORD=123
-        ports: 
-            - 3306:3306
-        networks: 
-            - mynet
-    core: 
-        build: ./core         #Dockerfile所在目录，相对或绝对路径都可以
-        image: core:latest    #构建的镜像名字
-        container_name: core
-        networks: 
-            - mynet
-        depends_on:           #依赖容器会先启动
-            - zookeeper
-            - mysql
-    store: 
-        build: ./store
-        image: store:latest
-        container_name: store
-        ports: 
-            - 80:80
-            - 443:443
-        networks: 
-            - mynet
-        depends_on:
-            - core
-networks: 
-    mynet:
-        driver: bridge
-```
-
-### 启动
-
-```bash
-# 命令行需要在docker-compose.yml目录
-sudo docker-compose up --build -d
-     #-d       后台运行
-     #--build  不管镜像是否存在都要重新构建
-```
-
-### docker-compose file version和docker version关系
-
-| Compose file format | Docker Engine release |
-| :-----------------: | :-------------------: |
-|         3.7         |       18.06.0+        |
-|         3.6         |       18.02.0+        |
-|         3.5         |       17.12.0+        |
-|         3.4         |       17.09.0+        |
-|         3.3         |       17.06.0+        |
-|         3.2         |       17.04.0+        |
-|         3.1         |        1.13.1+        |
-|         3.0         |        1.13.0+        |
-|         2.4         |       17.12.0+        |
-|         2.3         |       17.06.0+        |
-|         2.2         |        1.13.0+        |
-|         2.1         |        1.12.0+        |
-|         2.0         |        1.10.0+        |
-|         1.0         |        1.9.1.+        |
 
 
 

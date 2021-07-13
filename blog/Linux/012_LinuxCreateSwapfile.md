@@ -87,6 +87,44 @@ sudo swapoff /opt/swapfile
 
 
 
+## 设置交换分区
+
+### swappiness
+
+实际上，并不是等所有的物理内存都消耗完毕之后，才去使用swap的空间，而是由swappiness 参数值控制。
+
+该值默认值是60.
+
+swappiness=0 的时候表示最大限度使用物理内存，然后才是 swap 空间，
+
+swappiness＝100 的时候表示积极的使用swap分区，并且把内存上的数据及时的搬运到swap空间里面。
+
+查看值
+
+```bash
+cat /proc/sys/vm/swappiness
+```
+
+**临时性修改**
+
+```bash
+sysctl vm.swappiness=10
+```
+
+**永久修改**
+
+在/etc/sysctl.conf 文件里添加如下：
+
+vm.swappiness=10
+
+
+
+
+
+------------------------------------------------
+版权声明：本文为CSDN博主「Dave」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/tianlesoftware/article/details/8741873
+
 
 
 
