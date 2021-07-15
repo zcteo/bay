@@ -115,11 +115,11 @@ Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些�
 
 **config**
 
-指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译；webengine 太难编了，反正目前用不到，等以后有机会再编译
+指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译；~~webengine 太难编了，反正目前用不到，等以后有机会再编~~；是的，现在我不得不编 webengine 了，请参考[《编译 QtWenEngine》](006_CompileQtWenEngine.md)
 
 ```bash
 ./configure -prefix /opt/qt-5.12.10 -qt-xcb -fontconfig -system-freetype \
-            -nomake tests -nomake examples -skip webengine
+            -opensource -confirm-license -nomake tests -nomake examples -skip webengine
 ```
 
 在桌面系统，上面的 `-qt-xcb -fontconfig -system-freetype` 选项一定要加，第一个不加 UI 程序起不来，后面两个不加就不显示字体
@@ -128,7 +128,7 @@ Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些�
 
 > ERROR: Feature 'fontconfig' was enabled, but the pre-condition '!config.msvc && features.system-freetype && libs.fontconfig' failed.
 
-config 的过程中会让选开源版还是商业版，然后还有一个同意开源协议，漫长的等待后就会看到以下结果：虽说程序员从不关心 warning，但有些时候还是可以注意一下下，根据提示安装缺少的依赖
+~~config 的过程中会让选开源版还是商业版，然后还有一个同意开源协议~~，加上 `-opensource -confirm-license` 就不用手动选择和确认了；漫长的等待后就会看到以下结果：虽说程序员从不关心 warning，但有些时候还是可以注意一下下，根据提示安装缺少的依赖
 
 ```bash
 # 这是QT官网推荐的
@@ -136,15 +136,13 @@ sudo apt install libfontconfig1-dev libfreetype6-dev\
      libx11-dev libxext-dev libxfixes-dev libxi-dev\
      libxrender-dev libxcb1-dev libx11-xcb-dev\
      libxcb-glx0-dev libxkbcommon-x11-dev
-     
+
 # 这是我在ubuntu 20.04上面根据警告和错误日志安装的
-sudo apt install build-essential
-sudo apt install libxkbcommon-x11-dev
-sudo apt install libx11-dev
-sudo apt install libfontconfig1-dev
-sudo apt install mesa-common-dev
-sudo apt install libdbus-1-dev
-sudo apt install libclang-dev
+sudo apt install build-essential libxkbcommon-x11-dev libx11-dev\
+     libfontconfig1-dev mesa-common-dev libdbus-1-dev
+
+# 这俩是qtdoc的，无所谓了
+sudo apt install libclang-dev llvm
 ```
 
 ![07](img/001/07.png)

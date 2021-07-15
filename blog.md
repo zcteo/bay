@@ -89,6 +89,8 @@
 
   * [编译安装 QtCreator](blog/QT/./005_CompileQtCreator.md)
 
+  * [编译 QtWenEngine](blog/QT/./006_CompileQtWenEngine.md)
+
 * Skill
 
   * [升级高版本 Win10 ANOMALY: use of REX.w is meaningless (default operand size is 64)](blog/Skill/./001_Win10ANOMALY.md)
