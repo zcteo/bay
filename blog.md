@@ -79,7 +79,7 @@
 
 * QT
 
-  * [Linux 安装 QT](blog/QT/./001_InstallQt.md)
+  * [Linux 安装/编译 QT](blog/QT/./001_InstallQt.md)
 
   * [配置 Clion Qt 开发环境](blog/QT/./002_CLionQt.md)
 

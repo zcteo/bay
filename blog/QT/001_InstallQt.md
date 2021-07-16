@@ -1,4 +1,4 @@
-# Linux 安装 QT
+# Linux 安装/编译 QT
 
 [TOC]
 
@@ -101,6 +101,8 @@ sudo vim /usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf
 
 Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些情况下我们并没有相应的网络环境适合在线安装，或者我们使用的处理器架构没有预编译的二进制文件，这时候就不得不学习离线安装了；这里以长期支持版5.12.10为例
 
+你要问我为什么不交叉编译？我只想说，我不会，等我交叉编译环境配置好的话，我的开发板可能已经编译完了。
+
 ### 下载源码
 
 具体下载地址和层级说明参考[离线安装版 -> 下载](#下载)
@@ -172,6 +174,12 @@ sudo make install
 ```bash
 sudo apt install mesa-common-dev -y
 ```
+
+
+
+## 参考文档
+
+1. [QtDoc - Building Qt Sources](https://doc.qt.io/qt-5/build-sources.html)
 
 
 

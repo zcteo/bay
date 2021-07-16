@@ -1,9 +1,5 @@
 # 编译安装 QtCreator
 
-参考官方文档 <https://wiki.qt.io/Building_Qt_Creator_from_Git>
-
-
-
 ## 下载源码
 
 <https://download.qt.io/official_releases/qtcreator/>
@@ -48,6 +44,10 @@ sudo make install
 我个人很喜欢 cmake，编译过程一目了然
 
 
+
+## 参考文档
+
+1. [QtDoc - Building Qt Creator from Git](https://wiki.qt.io/Building_Qt_Creator_from_Git)
 
 
 

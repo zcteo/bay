@@ -85,7 +85,7 @@ sudo make install
 
 
 
-## 参考文章
+## 参考文档
 
 1. [QtDoc - Building Qt Sources](https://doc.qt.io/qt-5/build-sources.html)
 
