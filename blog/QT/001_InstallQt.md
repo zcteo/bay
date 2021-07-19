@@ -155,7 +155,7 @@ sudo apt install libclang-dev llvm
 make -j$(nproc)
 ```
 
-这个就是更漫长的等待了
+这个就是更漫长的等待了；在 FT2000/4 上面耗时 95min 左右
 
 **make install**
 

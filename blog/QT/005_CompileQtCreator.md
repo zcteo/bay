@@ -1,5 +1,7 @@
 # 编译安装 QtCreator
 
+[toc]
+
 ## 下载源码
 
 <https://download.qt.io/official_releases/qtcreator/>
@@ -41,7 +43,13 @@ make
 sudo make install
 ```
 
-我个人很喜欢 cmake，编译过程一目了然
+我个人很喜欢 cmake，编译过程一目了然；在FT2000/4上面使用CMake编译大概耗时25min
+
+
+
+## 其他
+
+如果编译时系统内有 QtWebEngine 模块的话，帮助界面会默认使用 QtWebEngine
 
 
 
