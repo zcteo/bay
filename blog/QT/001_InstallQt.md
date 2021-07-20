@@ -120,8 +120,8 @@ Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些�
 指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译；~~webengine 太难编了，反正目前用不到，等以后有机会再编~~；是的，现在我不得不编 webengine 了，请参考[《编译 QtWenEngine》](006_CompileQtWenEngine.md)
 
 ```bash
-./configure -prefix /opt/qt-5.12.10 -qt-xcb -fontconfig -system-freetype \
-            -opensource -confirm-license -nomake tests -nomake examples -skip webengine
+./configure -prefix /opt/qt-5.12.10 -qt-xcb -fontconfig -system-freetype\
+  -opensource -confirm-license -nomake tests -nomake examples -skip webengine
 ```
 
 在桌面系统，上面的 `-qt-xcb -fontconfig -system-freetype` 选项一定要加，第一个不加 UI 程序起不来，后面两个不加就不显示字体
@@ -139,11 +139,10 @@ sudo apt install libfontconfig1-dev libfreetype6-dev\
      libxrender-dev libxcb1-dev libx11-xcb-dev\
      libxcb-glx0-dev libxkbcommon-x11-dev
 
-# 这是我在ubuntu 20.04上面根据警告和错误日志安装的
-sudo apt install build-essential libxkbcommon-x11-dev libx11-dev\
-     libfontconfig1-dev mesa-common-dev libdbus-1-dev
+# 这是我在ubuntu 20.04上面根据警告和错误日志额外安装的
+sudo apt install build-essential mesa-common-dev libdbus-1-dev
 
-# 这俩是qtdoc的，无所谓了
+# 这俩是qtdoc的，要编译文档才装，因为这比较大
 sudo apt install libclang-dev llvm
 ```
 
@@ -162,6 +161,19 @@ make -j$(nproc)
 ```bash
 sudo make install
 ```
+
+
+
+### 编译文档
+
+文档需要单独编译，然后就可以 `F1` 跳转了
+
+```bash
+make docs -j$(nproc)
+sudo make install
+```
+
+在 FT2000/4 上面耗时 57min 左右
 
 
 

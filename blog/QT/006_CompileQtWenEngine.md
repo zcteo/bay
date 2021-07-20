@@ -20,18 +20,25 @@
 
 ```bash
 # 官网推荐的
-sudo apt instal bison build-essential gperf flex libasound2-dev \
-     libcups2-dev libdrm-dev libegl1-mesa-dev libnss3-dev libpci-dev \
-     libpulse-dev libudev-dev nodejs libxtst-dev gyp ninja-build
+sudo apt install bison build-essential gperf flex nodejs\
+     libasound2-dev libcups2-dev libdrm-dev libegl1-mesa-dev\
+     libnss3-dev libpci-dev libpulse-dev libudev-dev\
+     libxtst-dev gyp ninja-build
 
 # 官网说的是ubuntu20.04+额外的，如果不是在ubuntu20.04+以上用的话，就先不全部装吧；
-# 银河麒麟V10实测前4个必须得装
-sudo apt install libssl-dev libxcursor-dev libxcomposite-dev libxrandr-dev \
-     libxdamage-dev libfontconfig1-dev libxss-dev libsrtp0-dev libwebp-dev \
-     libjsoncpp-dev libopus-dev libminizip-dev libavutil-dev libavformat-dev \
-     libavcodec-dev libevent-dev libvpx-dev libsnappy-dev libre2-dev \
+# 银河麒麟V10以及ubuntu20.4实测前4个必须得装
+sudo apt install libssl-dev libxcursor-dev libxcomposite-dev\
+     libxrandr-dev libxdamage-dev libfontconfig1-dev libxss-dev\
+     libsrtp0-dev libwebp-dev libjsoncpp-dev libopus-dev\
+     libminizip-dev libavutil-dev libavformat-dev libvpx-dev\
+     libavcodec-dev libevent-dev libsnappy-dev libre2-dev\
      libprotobuf-dev protobuf-compiler
 
+#这是银河麒麟V10以及ubuntu20.4实测必须装的
+sudo apt install bison build-essential gperf flex libasound2-dev\
+     libcups2-dev libdrm-dev libegl1-mesa-dev libnss3-dev libpci-dev\
+     libpulse-dev libudev-dev nodejs libxtst-dev gyp ninja-build\
+     libssl-dev libxcursor-dev libxcomposite-dev libxrandr-dev
      
 ###########################################
 # 拆分版，跟上面一样的                       #
@@ -52,7 +59,7 @@ sudo apt install nodejs
 sudo apt install libxtst-dev
 sudo apt install gyp
 sudo apt install ninja-build
-# ubuntu20.04+额外的；银河麒麟V10实测前4个必须得装
+# ubuntu20.04+额外的；银河麒麟V10以及ubuntu20.4实测前4个必须得装
 sudo apt install libssl-dev
 sudo apt install libxcursor-dev
 sudo apt install libxcomposite-dev
@@ -90,7 +97,7 @@ make -j$(nproc)
 sudo make install
 ```
 
-我在国产 FT2000/4 处理器上大概花了6个小时的样子吧
+我在国产 FT2000/4 处理器上大概花了5个小时的样子吧
 
 
 

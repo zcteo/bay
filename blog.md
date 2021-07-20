@@ -97,7 +97,7 @@
 
   * [安卓 NDK native 方法 crash 定位分析](blog/Skill/./002_NDKNativeMethodCrash.md)
 
-  * [MySQL常见问题及优化](blog/Skill/./003_MySqlCommonProblems.md)
+  * [MySQL常见问题及优化](blog/Skill/./003_MySqlCommonIssues.md)
 
   * [VS2017 & VS2019 创建离线安装包](blog/Skill/./004_VS2019OfflineInstaller.md)
 
