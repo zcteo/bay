@@ -25,7 +25,7 @@ sudo apt install bison build-essential gperf flex nodejs\
      libnss3-dev libpci-dev libpulse-dev libudev-dev\
      libxtst-dev gyp ninja-build
 
-# 官网说的是ubuntu20.04+额外的，如果不是在ubuntu20.04+以上用的话，就先不全部装吧；
+# 官网说的是ubuntu20.04+额外的;但是我不想全部安装
 # 银河麒麟V10以及ubuntu20.4实测前4个必须得装
 sudo apt install libssl-dev libxcursor-dev libxcomposite-dev\
      libxrandr-dev libxdamage-dev libfontconfig1-dev libxss-dev\
@@ -41,7 +41,7 @@ sudo apt install bison build-essential gperf flex libasound2-dev\
      libssl-dev libxcursor-dev libxcomposite-dev libxrandr-dev
      
 ###########################################
-# 拆分版，跟上面一样的                       #
+# 拆分版，跟上面一样的
 ###########################################
 sudo apt install bison
 sudo apt install build-essential
