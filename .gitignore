@@ -1,5 +1,5 @@
 _site
 .sass-cache
 .jekyll-cache
-covertImgUrl.sh
+covert_url.sh
 .public/
