@@ -117,7 +117,7 @@ Qt5.15之后不提供离线安装包了，只提供在线安装；但是某些�
 
 **config**
 
-指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译；~~webengine 太难编了，反正目前用不到，等以后有机会再编~~；是的，现在我不得不编 webengine 了，请参考[《编译 QtWenEngine》](006_CompileQtWenEngine.md)
+指定 install 的路径；不编译测试和示例，这些东西有用，但是可以等待需要的时候再编译；~~webengine 太难编了，反正目前用不到，等以后有机会再编~~；是的，现在我不得不编 webengine 了，请参考[《编译 QtWebEngine》](006_CompileQtWebEngine.md)
 
 ```bash
 ./configure -prefix /opt/qt-5.12.10 -qt-xcb -fontconfig -system-freetype\
@@ -174,6 +174,14 @@ sudo make install
 ```
 
 在 FT2000/4 上面耗时 57min 左右
+
+
+
+### 编译过程中可能遇到的问题
+
+**internal compiler error: Killed (program cc1plus)**
+
+内存不够了，加虚拟内存，请参考[《Linux 创建交换文件 swapfile》](../Linux/012_LinuxCreateSwapfile.md)
 
 
 

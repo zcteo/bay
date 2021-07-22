@@ -51,9 +51,12 @@ sudo vim /home/gitlab/config/gitlab.rb
 # http协议所使用的访问地址
 external_url 'http://172.16.1.10'
 
-# ssh协议所使用的访问地址和端口
+# ssh协议所使用的访问地址
 gitlab_rails['gitlab_ssh_host'] = '172.16.1.10'
-gitlab_rails['gitlab_shell_ssh_port'] = 222 # 此端口是run时22端口映射的222端口
+# ssh端口，run时由22映射的222端口
+gitlab_rails['gitlab_shell_ssh_port'] = 222
+# 时区改为东八区
+gitlab_rails['time_zone'] = 'Asia/Shanghai'
 ```
 
 改了配置之后需要重新加载配置

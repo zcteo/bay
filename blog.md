@@ -89,7 +89,7 @@
 
   * [编译安装 QtCreator](blog/QT/./005_CompileQtCreator.md)
 
-  * [编译 QtWenEngine](blog/QT/./006_CompileQtWenEngine.md)
+  * [编译 QtWebEngine](blog/QT/./006_CompileQtWebEngine.md)
 
 * Skill
 

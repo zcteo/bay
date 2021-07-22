@@ -1,4 +1,4 @@
-# 编译 QtWenEngine
+# 编译 QtWebEngine
 
 [toc]
 
@@ -98,6 +98,14 @@ sudo make install
 ```
 
 我在国产 FT2000/4 处理器上大概花了5个小时的样子吧
+
+
+
+## 编译过程中可能遇到的问题
+
+**fatal error:Killed signal terminated program cc1plus**
+
+内存不够了，加虚拟内存，请参考[《Linux 创建交换文件 swapfile》](../Linux/012_LinuxCreateSwapfile.md)
 
 
 
