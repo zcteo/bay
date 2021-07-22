@@ -114,13 +114,3 @@ sudo make install
 1. [QtDoc - Building Qt Sources](https://doc.qt.io/qt-5/build-sources.html)
 
 2. [QtWiki - QtWebEngine/How_to_Try](https://wiki.qt.io/QtWebEngine/How_to_Try)
-
-
-
-
-***
-
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

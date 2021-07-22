@@ -116,14 +116,3 @@ std::cout OUTPUT3(1, 2, 3) << std::endl;
 几个参数就需要定义几个宏；比如上面的例子，6个参数就会出问题了。可以看一下大神的代码，他定义了64个，非常之壮观
 
 [JSON for Modern C++ 中的可变参数宏定义](https://github.com/nlohmann/json/blob/b2e784c33bcdda3b58244f5811c89f023cd54715/single_include/nlohmann/json.hpp#L2352-L2484)
-
-
-
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

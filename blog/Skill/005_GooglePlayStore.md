@@ -5,7 +5,6 @@
 
 现在很多手机都内置了谷歌框架服务，但是 google play store 需要自行安装
 
-***文中提到网址需要科学访问***
 
 
 
@@ -38,14 +37,3 @@ google play service 下载地址：
 google play store下载地址：
 
 <https://www.apkmirror.com/apk/google-inc/google-play-store/>
-
-
-
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

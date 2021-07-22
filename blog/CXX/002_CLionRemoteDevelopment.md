@@ -156,14 +156,3 @@ CLion 为 GDB/gdbserver 远程调试提供了两种方法：即 GDB Remote Debug
 ## 参考链接
 
 <https://www.jetbrains.com/help/clion/remote-development.html>
-
-
-
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

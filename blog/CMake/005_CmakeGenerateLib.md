@@ -96,11 +96,3 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 ## 对外提供动态库
 
 请参考[《CMake 安装动态库并生成 XxxConfig.cmake 文件》](006_CmakeInstallSharedLib.md)
-
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*

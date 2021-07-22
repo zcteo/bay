@@ -79,14 +79,3 @@ addr2line -e libneondemo.so -f -C  00000000000009a4
 1. [ndk addr2line工具的使用](https://www.jianshu.com/p/c2e2b8f8ea0d)
 
 2. [addr2line](https://blog.csdn.net/xiongtiancheng/article/details/77899891)
-
-
-
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

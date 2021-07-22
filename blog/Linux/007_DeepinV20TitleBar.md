@@ -206,14 +206,3 @@ height=30
 1. github [linuxdeepin issue](https://github.com/linuxdeepin/developer-center/issues/1210)
 2. github [linuxdeepin ini文件](https://github.com/linuxdeepin/dde-kwin/tree/master/plugins/kdecoration/deepin)
 3. github [linuxdeepin 源码](https://github.com/linuxdeepin/dde-kwin/blob/master/plugins/kdecoration/chameleontheme.cpp)
-
-
-
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

@@ -56,13 +56,3 @@ sudo make install
 ## 参考文档
 
 1. [QtDoc - Building Qt Creator from Git](https://wiki.qt.io/Building_Qt_Creator_from_Git)
-
-
-
-
-***
-
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
-

@@ -36,4 +36,12 @@ for file in $files; do
             }
         }' "$file" >>".public/$file"
 
+    # 加上小尾巴
+    {
+        printf "\n\n\n---\n"
+        printf '*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*\n\n'
+        printf '*若文中个人文章链接打不开，请在站内寻找同名文章*\n\n'
+        printf '*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*\n\n'
+    } >>".public/$file"
+
 done

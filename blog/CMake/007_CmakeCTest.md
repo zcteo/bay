@@ -124,10 +124,3 @@ set_tests_properties(mytest PROPERTIES PASS_REGULAR_EXPRESSION "[a-Z]Pass;[Oo][K
 ### 其他属性
 
 其他还有一大堆属性，我目前用不到，也看不懂，就先不写了。
-
-
-
-***
-*由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正*
-
-*文章可能更新不及时，请以[个人博客](https://zcteo.top/)处文章为准*
