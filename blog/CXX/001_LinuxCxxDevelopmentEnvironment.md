@@ -128,7 +128,7 @@ chmod +x qt-creator-opensource-linux-x86_64-4.4.1.run
 
 文件 -> 打开文件或项目 -> 选择 CMakeLists.txt
 
-![image-20210406113009308](img/001/03.png)
+![03](img/001/03.png)
 
 然后就可以编译运行了
 
@@ -157,7 +157,7 @@ sudo dpkg -i code_1.52.1-1608136922_amd64.deb
 * CMake Tools
 * C/C++
 
-![image-20210406113911814](img/001/05.png)
+![05](img/001/05.png)
 
 
 
@@ -199,4 +199,4 @@ Type=Application
 
 open -> 选择 CMakeLists.txt -> OK -> Open As Project
 
-![image-20210406134016239](img/001/07.png)
+![07](img/001/07.png)

@@ -5,9 +5,9 @@ if [ ! -d ".public" ]; then
     mkdir .public || exit 1
 fi
 files=$(ls ./*.md)
-parentDir=$(pwd | awk -F "/" '{print $NF}')
-githubUrl="https://raw.githubusercontent.com/zcteo/zcteo.github.io/master/blog/"
-blogUrl="https://zcteo.top/blog/"
+parent_dir=$(pwd | awk -F "/" '{print $NF}')
+img_url_prefix="https://codechina.csdn.net/zcteo/github-pages/-/raw/master/blog/"
+blog_url_prefix="https://zcteo.top/blog/"
 for file in $files; do
     if [ -e ".public/$file" ]; then
         echo "正在更新 $file"
@@ -20,13 +20,13 @@ for file in $files; do
             # 处理图片链接
             if(match($0, /!\[(.*?)\]\((.*?)\)/ ,m))
             {
-                newUrl = "'"$githubUrl"'" "" "'"$parentDir/"'" "" m[2]
+                newUrl = "'"$img_url_prefix"'" "" "'"$parent_dir/"'" "" m[2]
                 print "<img src=\"" "" newUrl "" "\" alt=\"" "" m[1] "" "\"/>"
             }
             # 处理站内文章链接
             else if(match($0, /\(((.*?)\.md)\)/, m))
             {
-                newUrl = "'"($blogUrl"'" "" "'"$parentDir/"'" "" m[2] "" ".html)"
+                newUrl = "'"($blog_url_prefix"'" "" "'"$parent_dir/"'" "" m[2] "" ".html)"
                 sub(/\(.*?\.md\)/, newUrl, $0)
                 print $0
             }

@@ -201,6 +201,3 @@ sudo apt install mesa-common-dev -y
 
 1. [QtDoc - Building Qt Sources](https://doc.qt.io/qt-5/build-sources.html)
 
-
-
----

@@ -78,7 +78,7 @@ CLion 为 GDB/gdbserver 远程调试提供了两种方法：即 GDB Remote Debug
 
    ![05](img/002/05.png)
 
-   ![image-20210407152010578](img/002/06.png)
+   ![06](img/002/06.png)
 
 
 
@@ -116,7 +116,7 @@ CLion 为 GDB/gdbserver 远程调试提供了两种方法：即 GDB Remote Debug
 
 2. 可以看到 Debug 输出为远程机器的控制台信息，且能看到文件上传；然后也能顺利命中断点
 
-   ![image-20210407154454568](img/002/08.png)
+   ![08](img/002/08.png)
 
 
 
@@ -144,7 +144,7 @@ CLion 为 GDB/gdbserver 远程调试提供了两种方法：即 GDB Remote Debug
 
 2. 点击 ```+``` 号，选择 Remote Host；填入 Credentials 信息，其他东西会自动带入
 
-   ![image-20210407154957057](img/002/09.png)
+   ![09](img/002/09.png)
 
 **启动**
 
