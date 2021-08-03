@@ -91,6 +91,8 @@
 
   * [编译 QtWebEngine](blog/QT/./006_CompileQtWebEngine.md)
 
+  * [Windows 下 C++ 程序以管理员运行(UAC)](blog/QT/./006_QtUAC.md)
+
 * Skill
 
   * [升级高版本 Win10 ANOMALY: use of REX.w is meaningless (default operand size is 64)](blog/Skill/./001_Win10ANOMALY.md)
