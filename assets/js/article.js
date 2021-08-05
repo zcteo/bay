@@ -49,3 +49,41 @@ function generateToc() {
     tocTag.innerHTML = html
 }
 generateToc()
+
+/**
+ * 1. 创建一个textarea，把想要复制的内容赋值到textarea的value上；
+ * 2. 把这个textarea插入到body内；
+ * 3. 获取这个textarea，对它执行选中；
+ * 4. 执行document的copy事件；
+ * 5，删除刚刚插入的textarea。
+ */
+function copyText(text) {
+    // 就是一串乱码，这应该不会重复吧
+    var id = '6a55d770a25e73848cdc1905aad0401ddf92c045'
+    var tag = document.createElement('textarea');
+    tag.setAttribute('id', id);
+    tag.value = text;
+    document.getElementsByTagName('body')[0].appendChild(tag);
+    document.getElementById(id).select();
+    document.execCommand('copy');
+    document.getElementById(id).remove();
+}
+function onCopyClick(button) {
+    var parent = button.parentNode
+    var code = parent.lastChild
+    var txt = code.innerText
+    copyText(txt)
+    button.innerText = "copied"
+}
+function onCopyMouseOut(button) {
+    button.innerText = "copy"
+}
+function createCopyBtn() {
+    var codeTags = document.getElementsByTagName('code')
+    for (var i = 0; i < codeTags.length; i++) {
+        var parent = codeTags[i].parentNode
+        btnHtml = '<button class="copy_code_btn" onclick="onCopyClick(this)" onmouseout="onCopyMouseOut(this)">copy</button>'
+        parent.innerHTML = btnHtml + parent.innerHTML
+    }
+}
+createCopyBtn()

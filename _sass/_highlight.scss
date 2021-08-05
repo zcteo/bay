@@ -67,3 +67,34 @@
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
 .highlight .ss { color: #990073 } /* Literal.String.Symbol */
 
+
+pre {
+    font-size: 15px;
+    background: $codeBackgroundColor; 
+    color: $codeColor;
+}
+
+.highlight pre {
+    position: relative;
+}
+
+.copy_code_btn {
+    display: none;
+}
+
+.highlight pre>.copy_code_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 15px;
+    background: $codeBackgroundColor; 
+    color: $codeColor;
+    cursor: pointer;
+    display: none;
+}
+
+.highlight pre:hover>.copy_code_btn {
+    display: block;
+}
