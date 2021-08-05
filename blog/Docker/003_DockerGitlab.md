@@ -8,14 +8,14 @@
 sudo docker search gitlab
 ```
 
-gitlab-ce 一般是最新版本，也可以选择汉化版 gitlab-ce-zh
+gitlab-ce 一般是最新版本，~~也可以选择汉化版 gitlab-ce-zh~~，现在官方版本也有中文支持，之前的汉化版版本比较老
 
 ![01](img/003/01.png)
 
 拉取镜像
 
 ```bash
-sudo docker pull twang2218/gitlab-ce-zh
+sudo docker pull gitlab/gitlab-ce
 ```
 
 
@@ -25,7 +25,7 @@ sudo docker pull twang2218/gitlab-ce-zh
 ```bash
 sudo docker run -d  -p 443:443 -p 80:80 -p 222:22 --name gitlab --restart always \
   -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab \
-  -v /home/gitlab/data:/var/opt/gitlab twang2218/gitlab-ce-zh
+  -v /home/gitlab/data:/var/opt/gitlab gitlab/gitlab-ce
 # -d：后台运行
 # -p：将容器内部端口向外映射；一般本机22号端口被ssh占用，所以映射到222
 # --name：命名容器名称
@@ -67,13 +67,9 @@ gitlab_rails['time_zone'] = 'Asia/Shanghai'
 sudo docker restart gitlab
 ```
 
-方式二：进入容器重新加载配置
+方式二：容器内重新加载配置
 
 ```bash
-# 进入容器
-sudo docker exec -it gitlab bash
-# 重新加载配置
-gitlab-ctl reconfigure
-# 退出容器
-exit
+sudo docker exec gitlab-ctl reconfigure
 ```
+

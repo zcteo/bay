@@ -26,7 +26,7 @@ sudo docker pull dperson/samba
 sudo docker run -d --name samba -p143:143 -p445:445 --restart always -v /home/samba:/mount dperson/samba \
      -u "name;password" -s "file;/mount;no;no;no;Eric;none" -r
 # -d：后台运行
-# -p：将容器内部端口向外映射；一般本机22号端口被ssh占用，所以映射到222
+# -p：将容器内部端口向外映射
 # --name：命名容器名称
 # -v：将容器内数据文件夹或者日志、配置等文件夹挂载到宿主机指定目录
 # --restart always docker启动的时候自动启动
@@ -34,7 +34,7 @@ sudo docker run -d --name samba -p143:143 -p445:445 --restart always -v /home/sa
 
 运行成功后出现一串字符串，容器已经在后台启动。
 
-容器名字后面的参数是容器的参数，与docker无关；具体如下，请参考 [GitLab](https://github.com/dperson/samba)
+容器名字后面的参数是容器的参数，与docker无关；具体如下，请参考 [GitHub](https://github.com/dperson/samba)
 
 ```bash
 sudo docker run -it --rm dperson/samba -h
