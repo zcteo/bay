@@ -67,3 +67,16 @@ sudo apt install tigervnc-standalone-server
 ![05](img/014/05.png)
 
 然后这个还支持多个客户端同时登录，使用完毕也需要手动注销登录，不然窗口管理器那边登不上。
+
+
+
+## 小结
+
+装了 xrdp 之后使用 Windows 连接的话就不用额外装软件了
+
+装桌面环境很多都是推荐 xfce4，确实比较轻，但是下面这句，我在有些系统没有设置也可以直接远程登录，有些系统却不行，先做个记录
+
+```bash
+echo xfce4-session >~/.xsession
+```
+

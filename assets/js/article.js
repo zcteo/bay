@@ -33,15 +33,15 @@ function generateToc() {
         var id = headers[i].id
         var content = headers[i].innerText
         var hLevel = parseInt(headers[i].nodeName.substr(1)) - startHeaderLevel
-        var p = document.createElement('p');
+        var p = document.createElement('p')
         var a = document.createElement('a')
-        p.style.cssText = 'margin: 5px 0px; text-indent: ' + hLevel * 2 + 'em';
+        p.style.cssText = 'margin: 5px 0px; text-indent: ' + hLevel * 2 + 'em'
         a.href = '#' + id
         a.innerText = content
         a.style.cssText = 'text-decoration: none'
         a.setAttribute('target', '_self')
         p.appendChild(a)
-        tocTag.appendChild(p);
+        tocTag.appendChild(p)
         // 不直接在循环里面appendChild 
         html += p.outerHTML
         // html += '<p style="margin: 5px 0px; text-indent: ' + hLevel * 2 + 'em"><a href="#' + id + '" target="_self" style="text-decoration: none">' + content + '</a></p>'
@@ -58,20 +58,25 @@ generateToc()
  * 5，删除刚刚插入的textarea。
  */
 function copyText(text) {
-    // 就是一串乱码，这应该不会重复吧
-    var id = '6a55d770a25e73848cdc1905aad0401ddf92c045'
-    var tag = document.createElement('textarea');
-    tag.setAttribute('id', id);
-    tag.value = text;
-    document.getElementsByTagName('body')[0].appendChild(tag);
-    document.getElementById(id).select();
-    document.execCommand('copy');
-    document.getElementById(id).remove();
+    var element = document.createElement('textarea')
+    element.value = text
+    document.getElementsByTagName('body')[0].appendChild(element)
+    element.select()
+    document.execCommand('copy')
+    element.remove()
 }
 function onCopyClick(button) {
     var parent = button.parentNode
     var code = parent.lastChild
     var txt = code.innerText
+    // 去掉最后的换行符
+    if (txt.endsWith('\n')) {
+        txt = txt.slice(0, txt.length - 1)
+    }
+    // 去掉最后的回车符
+    if (txt.endsWith('\r')) {
+        txt = txt.slice(0, txt.length - 1)
+    }
     copyText(txt)
     button.innerText = "copied"
 }
