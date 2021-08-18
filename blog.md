@@ -77,6 +77,8 @@
 
   * [ANSI 兼容终端颜色控制](blog/Linux/./013_LinuxConsoleColor.md)
 
+  * [Windows 直接远程 Linux 桌面](blog/Linux/./014_RDPRemot.md)
+
 * QT
 
   * [Linux 安装/编译 QT](blog/QT/./001_InstallQt.md)
