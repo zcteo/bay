@@ -46,7 +46,7 @@ sudo mkswap /opt/swapfile
 # 设置权限为0600
 sudo chmod 0600 /opt/swapfile
 #重新设置，顺手指定一下label
-sudo mkswap swapfile --label /opt/swapfile
+sudo mkswap --label swapfile /opt/swapfile
 ```
 
 
