@@ -22,44 +22,35 @@ Linux
 >
 > 第一行Qt bin目录，第二行Qt安装目录
 
+
+
 ## 配置 Clion
 
 ### External Tools
 
-Qt Designer
+**Qt Designer**
 
 ```
-Program: Qt bin目录下uic
+Program: Qt bin目录下designer
 Arguments: $FileName$
 Working directory: $FileDir$
 ```
 
-uic
+**uic**
+
+*2020.3 及其以后版本已经支持 QT UIC，不用做额外配置*
 
 ```
-Program: Qt bin目录下designer
+Program: Qt bin目录下uic
 Arguments: $FileName$ -o ui_$FileNameWithoutExtension$.h
 Working directory: $FileDir$
 ```
 
 ### File and Code Templates
 
-**2020.3及其以后版本已经支持QT Class，不用做额外配置**
+*2020.3 及其以后版本已经支持 QT Class，不用做额外配置*
 
-C++ File Header
-
-```velocity
-#set($USER_NAME = "EricTeo")
-//
-#if($USER_NAME)
-// Created by ${USER_NAME} on ${DATE}.
-#else
-// Created by ${USER} on ${DATE}.
-#end
-//
-```
-
-Qt Class Header
+**Qt Class Header**
 
 ```velocity
 #parse("C++ File Header.h")
@@ -69,8 +60,8 @@ Qt Class Header
 
 namespace Ui{ class ${NAME}; }
 
-class ${NAME} : public ${Base_class} {
-
+class ${NAME} : public ${Base_class}
+{
 Q_OBJECT
 
 public:
@@ -87,18 +78,20 @@ private:
 
 
 
-Qt Class
+**Qt Class**
 
 ```velocity
 #parse("C++ File Header.h")
 #[[#include]]# "${NAME}.h"
 #[[#include]]# "ui_${NAME}.h"
 
-${NAME}::${NAME}(QWidget *parent):${Base_class}(parent),ui(new Ui::${NAME}){
+${NAME}::${NAME}(QWidget *parent):${Base_class}(parent),ui(new Ui::${NAME})
+{
     ui->setupUi(this);
 }
 
-${NAME}::~${NAME}(){
+${NAME}::~${NAME}()
+{
     delete ui;
 }
 ```
@@ -148,6 +141,8 @@ add_executable(${PROJECT_NAME} ${srcs} ${uis} ${qrcs})
 # 把对应Qt模块的库链接进程序
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 ```
+
+
 
 ## 打包Qt应用程序
 
