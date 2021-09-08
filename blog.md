@@ -95,7 +95,7 @@
 
   * [Windows 下 C++ 程序以管理员运行(UAC)](blog/QT/./006_QtUAC.md)
 
-  * [](blog/QT/./007_CLionQtDebug.md)
+  * [配置 Clion 调试显示 Qt 变量](blog/QT/./007_CLionQtDebug.md)
 
 * Skill
 
