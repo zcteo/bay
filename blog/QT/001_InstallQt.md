@@ -195,6 +195,12 @@ sudo make install
 sudo apt install mesa-common-dev -y
 ```
 
+**Qt Creator 启动失败**
+
+```bash
+sudo apt install libxcb-xinerama0
+```
+
 
 
 ## 参考文档

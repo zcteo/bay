@@ -79,6 +79,8 @@
 
   * [Windows 直接远程 Linux 桌面](blog/Linux/./014_RDPRemot.md)
 
+  * [PulseAudio 踩坑](blog/Linux/./015_PulseAudio.md)
+
 * QT
 
   * [Linux 安装/编译 QT](blog/QT/./001_InstallQt.md)
