@@ -6,7 +6,7 @@ if [ ! -d ".public" ]; then
 fi
 files=$(ls ./*.md)
 parent_dir=$(pwd | awk -F "/" '{print $NF}')
-img_url_prefix="https://codechina.csdn.net/zcteo/github-pages/-/raw/master/blog/"
+img_url_prefix="https://gitcode.net/zcteo/github-pages/-/raw/master/blog/"
 blog_url_prefix="https://zcteo.top/blog/"
 for file in $files; do
     if [ -e ".public/$file" ]; then

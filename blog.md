@@ -99,6 +99,8 @@
 
   * [配置 Clion 调试显示 Qt 变量](blog/QT/./007_CLionQtDebug.md)
 
+  * [windeployqt 打包程序](blog/QT/./008_WindeployQt.md)
+
 * Skill
 
   * [升级高版本 Win10 ANOMALY: use of REX.w is meaningless (default operand size is 64)](blog/Skill/./001_Win10ANOMALY.md)

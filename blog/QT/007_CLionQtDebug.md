@@ -114,6 +114,12 @@ public:
 
 
 
+## 附件
+
+正在使用的脚本 qt5printers.tar.xz [下载](../../attachment/qt5printers.tar.xz)
+
+
+
 ## 参考文章
 
 1. [jetbrains 官方 issue](https://youtrack.jetbrains.com/issue/CPP-605)
