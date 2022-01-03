@@ -35,6 +35,8 @@
 
   * [Log4cplus 配置文件](blog/CXX/./007_log4cplusPropertyConfigurator.md)
 
+  * [使用 gdb 和 gdbserver 远程调试](blog/CXX/./008_GdbGdberverRemoteDebug.md)
+
 * Docker
 
   * [Docker 安装与使用](blog/Docker/./001_Docker.md)
