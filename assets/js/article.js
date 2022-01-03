@@ -91,8 +91,8 @@ function onCopyClick(button) {
     button.innerText = "copied"
 }
 
-function onCodeMouseOut(code) {
-    var childrens = code.parentNode.children
+function onCodeMouseOut(parent) {
+    var childrens = parent.children
     var button = null
     for (var i = 0; i < childrens.length; i++) {
         if ('copy_code_btn' === childrens[i].className) {
@@ -111,8 +111,7 @@ function createCopyBtn() {
         var parent = codeTags[i].parentNode
         btnHtml = '<button class="copy_code_btn" onclick="onCopyClick(this)">copy</button>'
         parent.innerHTML = btnHtml + parent.innerHTML
-        codeTags[i].setAttribute('onmouseout', 'onCodeMouseOut(this)')
-        console.log(codeTags[i].outerHTML)
+        parent.setAttribute('onmouseout', 'onCodeMouseOut(this)')
     }
 }
 createCopyBtn()
