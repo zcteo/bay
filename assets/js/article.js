@@ -65,9 +65,19 @@ function copyText(text) {
     document.execCommand('copy')
     element.remove()
 }
+
 function onCopyClick(button) {
-    var parent = button.parentNode
-    var code = parent.lastChild
+    var childrens = code.parentNode.children
+    var code = null
+    for (var i = 0; i < childrens.length; i++) {
+        if ('code' === childrens[i].tagName.toLowerCase()) {
+            code = childrens[i]
+            break
+        }
+    }
+    if (null === code) {
+        return
+    }
     var txt = code.innerText
     // 去掉最后的换行符
     if (txt.endsWith('\n')) {
@@ -80,15 +90,29 @@ function onCopyClick(button) {
     copyText(txt)
     button.innerText = "copied"
 }
-function onCopyMouseOut(button) {
-    button.innerText = "copy"
+
+function onCodeMouseOut(code) {
+    var childrens = code.parentNode.children
+    var button = null
+    for (var i = 0; i < childrens.length; i++) {
+        if ('copy_code_btn' === childrens[i].className) {
+            button = childrens[i]
+            break
+        }
+    }
+    if (null != button) {
+        button.innerText = "copy"
+    }
 }
+
 function createCopyBtn() {
     var codeTags = document.getElementsByTagName('code')
     for (var i = 0; i < codeTags.length; i++) {
         var parent = codeTags[i].parentNode
-        btnHtml = '<button class="copy_code_btn" onclick="onCopyClick(this)" onmouseout="onCopyMouseOut(this)">copy</button>'
+        btnHtml = '<button class="copy_code_btn" onclick="onCopyClick(this)">copy</button>'
         parent.innerHTML = btnHtml + parent.innerHTML
+        codeTags[i].setAttribute('onmouseout', 'onCodeMouseOut(this)')
+        console.log(codeTags[i].outerHTML)
     }
 }
 createCopyBtn()
