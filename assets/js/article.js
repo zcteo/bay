@@ -67,7 +67,7 @@ function copyText(text) {
 }
 
 function onCopyClick(button) {
-    var childrens = code.parentNode.children
+    var childrens = button.parentNode.children
     var code = null
     for (var i = 0; i < childrens.length; i++) {
         if ('code' === childrens[i].tagName.toLowerCase()) {
