@@ -103,6 +103,8 @@
 
   * [windeployqt 打包程序](blog/QT/./008_WindeployQt.md)
 
+  * [交叉编译 Qt5.12](blog/QT/./009_CrossCompileQt.md)
+
 * Skill
 
   * [升级高版本 Win10 ANOMALY: use of REX.w is meaningless (default operand size is 64)](blog/Skill/./001_Win10ANOMALY.md)
