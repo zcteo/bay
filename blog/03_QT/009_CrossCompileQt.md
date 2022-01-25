@@ -140,16 +140,16 @@ include(../common/gcc-base-unix.conf)
 include(../common/g++-unix.conf)
 
 # modifications to g++.conf
-QMAKE_CC                = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc
-QMAKE_CXX               = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
-QMAKE_LINK              = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
-QMAKE_LINK_SHLIB        = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
+QMAKE_CC          = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc
+QMAKE_CXX         = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
+QMAKE_LINK        = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
+QMAKE_LINK_SHLIB  = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
 
 # modifications to linux.conf
-QMAKE_AR                = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-ar cqs
-QMAKE_OBJCOPY           = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-objcopy
-QMAKE_NM                = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-nm -P
-QMAKE_STRIP             = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-strip
+QMAKE_AR          = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-ar cqs
+QMAKE_OBJCOPY     = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-objcopy
+QMAKE_NM          = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-nm -P
+QMAKE_STRIP       = /opt/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-strip
 load(qt_config)
 
 ```
@@ -194,6 +194,47 @@ sudo make install -j$(nproc)
 ```bash
 cd opt/qt-5.12.10
 ./convert2target.sh
+```
+
+
+
+## 目前遇到的问题
+
+### eglfs
+
+**Could not open egl display**
+
+确保编译的时候 `EGLFS details` 下面有yes
+
+```cpp
+EGLFS .................................. yes
+EGLFS details:
+  EGLFS OpenWFD ........................ no
+  EGLFS i.Mx6 .......................... no
+  EGLFS i.Mx6 Wayland .................. no
+  EGLFS RCAR ........................... no
+  EGLFS EGLDevice ...................... no
+  EGLFS GBM ............................ yes
+  EGLFS VSP2 ........................... no
+  EGLFS Mali ........................... no
+  EGLFS Raspberry Pi ................... no
+  EGL on X11 ........................... no
+```
+
+**Could not queue DRM page flip on screen xxx**
+
+```bash
+export QT_QPA_EGLFS_ALWAYS_SET_MODE=1
+```
+
+### qmake
+
+qmake 编译时架构是宿主机的，不能直接在板子上运行，现在我的解决方案就是在板子上编一遍，然后 install 之后就会有 qmake 这些工具了，也不知道有没有更好的解决方案
+
+```bash
+cd ${BUILD_DIR}
+${QT_SRC_DIR}/configure ...
+make -C ${BUILD_DIR}/qtbase/src sub-bootstrap qmake sub-moc sub-rcc sub-uic
 ```
 
 

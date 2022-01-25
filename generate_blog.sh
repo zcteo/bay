@@ -26,9 +26,13 @@ for dir in $dirs; do
     if [ -f "$dir" ] || [ "$dir" == "SaveOnly" ]; then
         continue
     else
-        printf "* %s\n\n" "$dir" >>"$file_name"
+        chapter_name=$(echo ${dir:3})
         cd "$dir" || continue
         files=$(ls ./*.md)
+        if [ -z "$files" ]; then
+            continue
+        fi
+        printf "* %s\n\n" "$chapter_name" >>"$file_name"
         for file in $files; do
             if [ -f "$file" ]; then
                 # 读取第一行
