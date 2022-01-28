@@ -51,7 +51,7 @@
 
   * [Log4cplus 配置文件](blog/02_CXX/./007_log4cplusPropertyConfigurator.md)
 
-  * [使用 gdb 和 gdbserver 远程调试](blog/02_CXX/./008_GdbGdberverRemoteDebug.md)
+  * [使用 gdb 和 gdbserver 远程调试 (未完成)](blog/02_CXX/./008_GdbGdberverRemoteDebug.md)
 
 * QT
 
@@ -74,6 +74,8 @@
   * [windeployqt 打包程序](blog/03_QT/./008_WindeployQt.md)
 
   * [交叉编译 Qt5.12](blog/03_QT/./009_CrossCompileQt.md)
+
+  * [CMake 交叉编译 Qt 应用 (未完成)](blog/03_QT/./010_CrossCompileQtApplication.md)
 
 * CMake
 

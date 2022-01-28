@@ -1,4 +1,4 @@
-# 使用 gdb 和 gdbserver 远程调试
+# 使用 gdb 和 gdbserver 远程调试 (未完成)
 
 [toc]
 
