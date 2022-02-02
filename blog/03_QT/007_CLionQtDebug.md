@@ -116,7 +116,7 @@ public:
 
 ## 附件
 
-正在使用的脚本 qt5printers.tar.xz [下载](pages-assitant/QT/007/qt5printers.tar.xz)
+正在使用的脚本 qt5printers.tar.xz [下载](/pages-assitant/QT/007/qt5printers.tar.xz)
 
 
 
