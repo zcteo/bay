@@ -26,7 +26,7 @@ for dir in $dirs; do
     if [ -f "$dir" ] || [ "$dir" == "SaveOnly" ]; then
         continue
     else
-        chapter_name=$(echo ${dir:3})
+        chapter_name="${dir:3}"
         cd "$dir" || continue
         files=$(ls ./*.md)
         if [ -z "$files" ]; then
