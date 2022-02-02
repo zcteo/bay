@@ -1,8 +1,5 @@
 ---
 layout: home
-profile_picture:
-  src: https://api.mfstudio.cc/bing/
-  alt: website picture
 ---
 
 <p>
