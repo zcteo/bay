@@ -35,6 +35,8 @@
 
   * [PulseAudio 踩坑](blog/01_Linux/./015_PulseAudio.md)
 
+  * [自动挂载 U 盘](blog/01_Linux/./016_AutoMountUsbstorage.md)
+
 * CXX
 
   * [Linux C/C++ 开发环境搭建](blog/02_CXX/./001_LinuxCxxDevelopmentEnvironment.md)
