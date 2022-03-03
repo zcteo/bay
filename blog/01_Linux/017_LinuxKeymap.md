@@ -1,4 +1,4 @@
-# Linux 快捷键与 JetBrains IDE 快捷键冲突解决方案 
+# Linux 与 JetBrains IDE 快捷键冲突解决
 
 
 
@@ -38,4 +38,16 @@ gsettings set org.ukui.SettingsDaemon.plugins.media-keys screensaver ""
 `ctrl + shift + f` 被搜狗输入法的简繁体切换占用，但是搜狗输入法界面上又没有地方可以修改，只能通过配置文件修改
 
 修改搜狗输入法配置文件 `~/.config/sogoupinyin/conf/env.ini` ，将其中的 `ShortCutFanJian` 值改为 0
+
+
+
+### 与 fcitx 输入框架冲突
+
+有配置界面的话，在插件配置里面找简繁转换
+
+没有界面的话
+
+修改配置文件 `~/.config/fcitx/conf/fcitx-chttrans.config` ，放开 `HotKey` 注释并删除等号右边内容，然后重启
+
+
 

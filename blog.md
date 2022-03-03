@@ -37,7 +37,7 @@
 
   * [自动挂载 U 盘](blog/01_Linux/./016_AutoMountUsbstorage.md)
 
-  * [Linux 快捷键与 JetBrains IDE 快捷键冲突解决方案](blog/01_Linux/./017_LinuxKeymap.md)
+  * [Linux 与 JetBrains IDE 快捷键冲突解决](blog/01_Linux/./017_LinuxKeymap.md)
 
 * CXX
 
