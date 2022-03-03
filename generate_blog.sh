@@ -16,17 +16,17 @@ rm -f "$file_name"
 tmp=$(pwd)/tmp
 blog=$(pwd)/blog
 cd "$blog" || exit 1
-dirs=$(ls)
-
+# 这里可以指定顺序
+dirs=(Linux CXX QT CMake Docker Golang Skill)
 echo '---' >"$file_name"
 printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
 echo '---' >>"$file_name"
 
-for dir in $dirs; do
+for dir in ${dirs[*]}; do
     if [ -f "$dir" ] || [ "$dir" == "SaveOnly" ]; then
         continue
     else
-        chapter_name="${dir:3}"
+        chapter_name="${dir}"
         cd "$dir" || continue
         files=$(ls ./*.md)
         if [ -z "$files" ]; then
