@@ -123,3 +123,5 @@
 
   * [Google play store 安装方法](blog/Skill/./005_GooglePlayStore.md)
 
+  * [双系统修复 Linux 引导](blog/Skill/./006_GrubBoot.md)
+
