@@ -57,6 +57,8 @@
 
   * [使用 gdb 和 gdbserver 远程调试 (未完成)](blog/CXX/./008_GdbGdberverRemoteDebug.md)
 
+  * [线程设置名字](blog/CXX/./009_ThreadName.md)
+
 * QT
 
   * [Linux 安装/编译 QT](blog/QT/./001_InstallQt.md)
