@@ -93,5 +93,7 @@ sudo make install
 
 ## 附件
 
-预编译的 aarch64 位的 libfcitxplatforminputcontextplugin.so [下载](/pages-assitant/QT/004/aarch64/libfcitxplatforminputcontextplugin.so)
+预编译的 x86_64 的 libfcitxplatforminputcontextplugin.so [下载](/pages-assitant/QT/004/x86_64/libfcitxplatforminputcontextplugin.so)
+
+预编译的 aarch64 的 libfcitxplatforminputcontextplugin.so [下载](/pages-assitant/QT/004/aarch64/libfcitxplatforminputcontextplugin.so)
 
