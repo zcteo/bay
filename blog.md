@@ -113,17 +113,19 @@
 
   * [Go 语言开发环境准备](blog/Golang/./001_DevelopmentEnvironment.md)
 
-* Skill
+* Others
 
-  * [升级高版本 Win10 ANOMALY: use of REX.w is meaningless (default operand size is 64)](blog/Skill/./001_Win10ANOMALY.md)
+  * [升级高版本 Win10 ANOMALY: use of REX.w is meaningless (default operand size is 64)](blog/Others/./001_Win10ANOMALY.md)
 
-  * [安卓 NDK native 方法 crash 定位分析](blog/Skill/./002_NDKNativeMethodCrash.md)
+  * [安卓 NDK native 方法 crash 定位分析](blog/Others/./002_NDKNativeMethodCrash.md)
 
-  * [MySQL常见问题及优化](blog/Skill/./003_MySqlCommonIssues.md)
+  * [MySQL常见问题及优化](blog/Others/./003_MySqlCommonIssues.md)
 
-  * [VS2017 & VS2019 创建离线安装包](blog/Skill/./004_VS2019OfflineInstaller.md)
+  * [VS2017 & VS2019 创建离线安装包](blog/Others/./004_VS2019OfflineInstaller.md)
 
-  * [Google play store 安装方法](blog/Skill/./005_GooglePlayStore.md)
+  * [Google play store 安装方法](blog/Others/./005_GooglePlayStore.md)
 
-  * [双系统修复 Linux 引导](blog/Skill/./006_GrubBoot.md)
+  * [双系统修复 Linux 引导](blog/Others/./006_GrubBoot.md)
+
+  * [CLion 使用](blog/Others/./007_ClionTips.md)
 
