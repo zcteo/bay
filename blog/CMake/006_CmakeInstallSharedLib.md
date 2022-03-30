@@ -21,16 +21,16 @@ project(FooLibrary VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(${PROJECT_NAME} SHARED library.cpp library.h)
+add_library(${PROJECT_NAME} SHARED library.cpp)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
-        PUBLIC_HEADER library.h)
-
+# 这个使用了生成器表达式，其他项目引入包的时候就可以同时引入头文件包含路径
 target_include_directories(${PROJECT_NAME} INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<INSTALL_INTERFACE:include>)
 
 set(CONFIG_FILE_PATH share/cmake/${PROJECT_NAME})
+
+include(GNUInstallDirs)
 
 include(CMakePackageConfigHelpers)
 
@@ -62,19 +62,35 @@ FooLibraryConfig.cmake.in
 @PACKAGE_INIT@
 
 include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+```
+
+
+
+~~FooLibraryConfig.cmake.in~~
+
+下面这几句主要是为了设置 `<PackageName>_NCLUDE_DIR`  `<PackageName>_NCLUDES` `<PackageName>_LIBRARY`   `<PackageName>_LIBRARIES`   `<PackageName>_LIBS` 等变量，但是这些变量 CMake 没有要求且各个库提供的都不一样，所以也可以不设置。
+
+```cmake
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+
 get_target_property(@PROJECT_NAME@_LIBRARY @PROJECT_NAME@ LOCATION)
 set_and_check(@PROJECT_NAME@_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
 ```
+
+
 
 然后就可以使用了
 
 ```cmake
 find_package(FooLibrary)
+target_link_libraries(${PROJECT_NAME} FooLibrary)
 ```
 
 
 
-## 简单解释
+## 简单解释CMakeLists.txt
 
 ### set_target_properties 
 
@@ -120,9 +136,9 @@ configure_package_config_file(<input> <output>
 
 与 configure_file 差不多，但是这个用来写 cmake config 文件会好很多，`INSTALL_DESTINATION` config文件将要安装的位置，`PATH_VARS` 指定的变量，可以在 Config.cmake.in 文件中类似这样 `@PACKAGE_VAR1@` 引用，这种用法可重定位，而不是硬编码
 
+
+
 ### write_basic_package_version_file
-
-
 
 <https://cmake.org/cmake/help/latest/module/CMakePackageConfigHelpers.html>
 
@@ -218,3 +234,4 @@ install(EXPORT <export-name> DESTINATION <dir>
         [COMPONENT <component>]
         [EXCLUDE_FROM_ALL])
 ```
+
