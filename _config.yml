@@ -38,7 +38,7 @@ valine:
   enable: true
   leanCloud_app_id: 'o84Egzh8KNWz67spySSU3xln-gzGzoHsz'
   leanCloud_app_key: 'o2VCxaUgT8sO4FDDN4fyeoV9'
-  placeholder: '欢迎提出您的宝贵意见'
+  placeholder: '欢迎提出您的宝贵意见，正确填写邮箱地址，有回复可收到邮件提醒'
 
 # 访问分析系统
 analytics:
