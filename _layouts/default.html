@@ -25,9 +25,13 @@
     <script>
       new Valine({
         el: '#valineComments',
-        appId: '{{ site.valine.leanCloud_app_id }}',
-        appKey: '{{ site.valine.leanCloud_app_key }}',
-        placeholder: '{{ site.valine.placeholder }}'
+        appId: '{{ site.valine.appId }}',
+        appKey: '{{ site.valine.appKey }}',
+        placeholder: '{{ site.valine.placeholder }}',
+        serverURLs: '{{ site.valine.serverURLs }}',
+        avatar: 'robohash',
+        enableQQ: true,
+        requiredFields: ['nick']
       })
     </script>
     {% endif %}

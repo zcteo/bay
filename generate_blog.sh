@@ -10,6 +10,7 @@ fi
 printf "Generating blog.md... \n"
 # 文件总数
 ((filesCount = $(find blog/*/*.md | wc -l) - $(find blog/SaveOnly/*.md | wc -l)))
+echo "Article count $filesCount"
 # 已处理的文件数
 processedCount=0
 rm -f "$file_name"
