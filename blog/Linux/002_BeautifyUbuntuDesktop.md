@@ -11,7 +11,7 @@ sudo apt install gnome-tweak-tool
 sudo apt install gnome-shell-extensions
 ```
 
-打开 tweak ，勾选 user themes；如果没有这个选项就注销或者重启一下
+打开 tweak (中文叫优化)，勾选 user themes；如果没有这个选项就注销或者重启一下
 
 ![01](img/002/01.png)
 
@@ -53,9 +53,35 @@ Mac 风格的图标 [McMojave-circle](https://www.gnome-look.org/p/1305429/)
 
 ## 安装 Dock 扩展
 
+### 在线安装
+
 打开 [Gmome 扩展官网](https://extensions.gnome.org/)，根据提示点击安装浏览器扩展，chrome 需要科学访问
 
 <img src="img/002/03.png">
+
+### 离线安装
+
+有些情况下，机器并不能直接访问外网，或者说不能科学山上网，无法安装 Chrome 插件，就需要离线安装了
+
+获取 gnome shell 版本
+
+```bash
+gnome-shell --version
+```
+
+根据 gnome shell 版本，选择需要下载的版本
+
+![07](img/002/07.png)
+
+下载后解压，将解压后的目录移到：~/.local/share/gnome-shell/extensions/ 下
+
+打开对应扩展目录下的 metadata.json 文件，查看 uuid，重命名刚才移过来的目录名为 uuid
+
+按 `Alt + F2` 输入 r 后按回车，重启
+
+关闭并重新打开 tweaks，在扩展处就可以看到安装的扩展了
+
+### dock 扩展
 
 二选一：
 
