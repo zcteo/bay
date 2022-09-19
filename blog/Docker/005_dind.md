@@ -4,6 +4,10 @@
 
 Docker in Docker，简称 dind，是一种在 docker 容器里面运行 docker 的方法，docker 官方镜像里面自己是有支持的，只不过 docker 现在的镜像是基于 Alpine Linux 的，我不太习惯，所以自己基于 ubuntu 20.04 做了一个 dind 镜像
 
+**重要**
+
+dind 方式运行容器的时候一定要加参数 `--privileged`，不然后台 docker 服务起不来
+
 
 
 ## 制作流程
