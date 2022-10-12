@@ -39,6 +39,8 @@
 
   * [Linux 与 JetBrains IDE 快捷键冲突解决](blog/Linux/./017_LinuxKeymap.md)
 
+  * [编译 FFmpeg](blog/Linux/018_BuildFFmpeg.md)
+
 * CXX
 
   * [Linux C/C++ 开发环境搭建](blog/CXX/./001_LinuxCxxDevelopmentEnvironment.md)
