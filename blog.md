@@ -2,7 +2,9 @@
   layout: blog
   title: Blog
   slug: /blog
+
 ---
+
 * Linux
 
   * [将已有 Linux 系统做成 img 镜像](blog/Linux/./001_LinuxSystemToImage.md)
@@ -39,7 +41,7 @@
 
   * [Linux 与 JetBrains IDE 快捷键冲突解决](blog/Linux/./017_LinuxKeymap.md)
 
-  * [编译 FFmpeg](blog/Linux/018_BuildFFmpeg.md)
+  * [APT 报错](blog/Linux/./018_Apt.md)
 
 * CXX
 
