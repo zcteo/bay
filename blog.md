@@ -2,9 +2,7 @@
   layout: blog
   title: Blog
   slug: /blog
-
 ---
-
 * Linux
 
   * [将已有 Linux 系统做成 img 镜像](blog/Linux/./001_LinuxSystemToImage.md)
@@ -136,4 +134,6 @@
   * [CLion 使用](blog/Others/./007_ClionTips.md)
 
   * [Valine 评论系统](blog/Others/./008_Valine.md)
+
+  * [获取电信光猫超级密码](blog/Others/./009_OpticalModem.md)
 
