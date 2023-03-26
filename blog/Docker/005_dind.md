@@ -29,7 +29,33 @@ apt install docker.io systemd -y
 # ubuntu的docker.io只能通过systemd启动
 ```
 
-修改内部的 docker 配置文件，这个很重要，不然无法启动容器
+### 修改配置
+
+因为第一层容器已经需要运行在 docker 下了，它的文件系统一般是不支持继续运行 docker 的
+
+#### 使用 fuse-overlayfs
+
+ fuse-overlayfs 支持所有的 backing filesystem
+
+安装 fuse-overlayfs
+
+```bash
+apt install fuse-overlayfs
+```
+
+修改配置文件
+
+`/etc/docker/daemon.json` 文件内容
+
+```json
+{
+    "storage-driver": "fuse-overlayfs"
+}
+```
+
+#### 使用 VFS
+
+ VFS 也支持所有的 backing filesystem，但是 VFS 文件系统是一层一层全量叠上去，很浪费空间
 
 `/etc/docker/daemon.json` 文件内容
 
@@ -39,7 +65,13 @@ apt install docker.io systemd -y
 }
 ```
 
-需要修改 storage-driver，因为 vfs 支持所有的 backing filesystem，所以直接就改成这个，因为第一层容器已经需要运行在 docker 下了，它的文件系统不一定是一样的
+#### 使用匿名卷
+
+在 Dockerfile 中加入以下
+
+```bash
+VOLUME ["/var/lib/docker"]
+```
 
 ### commit
 
@@ -64,6 +96,8 @@ build
 docker build -t ubuntu-20.04-dind:0.0.1
 ```
 
+
+
 ### 上传到服务器
 
 这里以华为云为例，点击生成临时登录指令，在终端运行
@@ -78,6 +112,8 @@ docker push swr.cn-east-3.myhuaweicloud.com/zcteo/ubuntu-20.04-dind:0.0.1
 
 
 ## 下载地址
+
+目前是 VFS 形式的
 
 ### 阿里云
 
