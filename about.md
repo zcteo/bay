@@ -35,6 +35,3 @@ Eric Teo
 <p>
     访问统计由 <a href="http://busuanzi.ibruce.info/">不蒜子</a> 提供
 </p>
-<p>
-    <a href="https://lcengine.zcteo.top/">评论管理</a>，这个是博主用的，别点
-</p>

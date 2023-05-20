@@ -35,3 +35,18 @@ $("a#wechat-link").on("mousemove", function (event) {
 $("a#wechat-link").on("mouseleave", function (event) {
   $("#wechat-widget").css({ display: "none" });
 });
+
+$(document).ready(function () {
+  var id = setInterval(fixCount, 100);
+  var site_pv = parseInt('{{ site.analytics.busunzi.site_pv }}')
+  var site_uv = parseInt('{{ site.analytics.busunzi.site_uv }}')
+  var page_pv = parseInt('{{ site.analytics.busunzi.page_pv }}')
+  function fixCount() {
+    if ($("#busuanzi_container_site_pv").css("display") != "none") {
+      clearInterval(id);
+      $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + site_pv)
+      $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + site_uv)
+      $("#busuanzi_value_page_pv").html(parseInt($("#busuanzi_value_page_pv").html()) + page_pv)
+    }
+  }
+});

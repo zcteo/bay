@@ -43,6 +43,11 @@ valine:
 
 # 访问分析系统
 analytics:
+  busunzi:
+    enable: true
+    site_pv: 131072
+    site_uv: 32768
+    page_pv: 1024
   google:
     enable: false
     value: 'G-H9X9BNEKZG'
