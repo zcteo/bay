@@ -47,11 +47,11 @@
 
   * [CLion 远程开发](blog/CXX/./002_CLionRemoteDevelopment.md)
 
-  * [C++ CSharp Java 调用 C++ DLL](blog/CXX/./003_CxxCsharpJavaCallCxxlib.md)
+  * [C++ CSharp Java 调用 C++ DLL](blog/CXX/./003_CallCxxlib.md)
 
-  * [C++11 中的字面量](blog/CXX/./004_CxxVariousStringAndCharacterTypes.md)
+  * [C++11 中的字面量](blog/CXX/./004_Literal.md)
 
-  * [C 可变参数宏](blog/CXX/./005_CxxVariableParameterMacro.md)
+  * [C 可变参数宏](blog/CXX/./005_VariadicMacro.md)
 
   * [log4cplus 使用](blog/CXX/./006_log4cplus.md)
 
@@ -60,6 +60,10 @@
   * [使用 gdb 和 gdbserver 远程调试 (未完成)](blog/CXX/./008_GdbGdberverRemoteDebug.md)
 
   * [线程设置名字](blog/CXX/./009_ThreadName.md)
+
+  * [C++ 模板特化](blog/CXX/./010_TemplatesSpecialization.md)
+
+  * [C++ 11 类型萃取及可变参数模板](blog/CXX/./011_TypeTraitsAndVariadicTemplate.md)
 
 * QT
 
