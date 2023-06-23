@@ -105,6 +105,26 @@ function onCodeMouseLeave(parent) {
     }
 }
 
+var lastScrollLeft = 0
+function onCodeScroll(parent) {
+    var curScrollLeft = parent.scrollLeft
+    if (Math.abs(curScrollLeft - lastScrollLeft) < 5) {
+        return
+    }
+    lastScrollLeft = curScrollLeft
+    var childrens = parent.children
+    var button = null
+    for (var i = 0; i < childrens.length; i++) {
+        if ('copy_code_btn' === childrens[i].className) {
+            button = childrens[i]
+            break
+        }
+    }
+    if (null != button) {
+        button.style.right = '-' + curScrollLeft + 'px';
+    }
+}
+
 function createCopyBtn() {
     var codeTags = document.getElementsByTagName('code')
     for (var i = 0; i < codeTags.length; i++) {
@@ -112,6 +132,7 @@ function createCopyBtn() {
         btnHtml = '<button class="copy_code_btn" onclick="onCopyClick(this)">copy</button>'
         parent.innerHTML = btnHtml + parent.innerHTML
         parent.setAttribute('onmouseleave', 'onCodeMouseLeave(this)')
+        parent.setAttribute('onscroll', 'onCodeScroll(this)')
     }
 }
 createCopyBtn()
