@@ -363,6 +363,19 @@ H &get(TupleImpl<index, H, Args...> &t) {
 }
 ```
 
+调用解析
+
+```cpp
+int main(int argc, char *argv[]) {
+    Tuple<short, int, float, double> t(1, 2, 3.3f, 4.4);
+    std::cout << get<0>(t) << std::endl; // 隐式转换成 TupleImpl<0, short, int, float, double>
+    std::cout << get<1>(t) << std::endl; // 隐式转换成 TupleImpl<1, int, float, double>
+    std::cout << get<2>(t) << std::endl; // 隐式转换成 TupleImpl<2, float, double>
+    std::cout << get<3>(t) << std::endl; // 隐式转换成 TupleImpl<3, double>
+    return 0;
+}
+```
+
 
 
 ## 小结

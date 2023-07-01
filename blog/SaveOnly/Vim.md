@@ -16,4 +16,5 @@ Ctrl+b/f  #滚全屏
 :wq     #保存并退出，可分开始用
 :q!     #强制退出，不保存
 :w [filename] #另存为
+:w !sudo tee %  # 提升sudo权限
 ```
