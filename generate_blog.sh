@@ -29,7 +29,7 @@ for dir in "${dirs[@]}"; do
     else
         chapter_name="${dir}"
         cd "$dir" || continue
-        files=$(ls ./*.md)
+        files=$(ls *.md)
         if [ -z "$files" ]; then
             continue
         fi
