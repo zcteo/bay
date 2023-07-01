@@ -65,6 +65,8 @@
 
   * [C++ 11 类型萃取及可变参数模板](blog/CXX/./011_TypeTraitsAndVariadicTemplate.md)
 
+  * [C++ 11 可变参数模板类](blog/CXX/./012_VariadicTemplateClass.md)
+
 * QT
 
   * [Linux 安装/编译 QT](blog/QT/./001_InstallQt.md)

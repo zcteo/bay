@@ -215,7 +215,7 @@ double Sum<int, long, float, double>(int i, long l, float f, double d) {
 
 
 
-### 类似 std::thread 实现
+### 可变参数模板类
 
 看到可变参数模板的第一反应就是 std::thread，类似实现如下
 
@@ -246,7 +246,7 @@ int main() {
 }
 ```
 
-
+这只是做了类似委托的效果，并没有展开可变参数，详细的可变参数模板类展开详见[《C++ 11 可变参数模板类》](012_VariadicTemplateClass.md)
 
 ### 其他
 
