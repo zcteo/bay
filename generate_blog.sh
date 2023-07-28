@@ -18,7 +18,7 @@ tmp=$(pwd)/tmp
 blog=$(pwd)/blog
 cd "$blog" || exit 1
 # 这里可以指定顺序
-dirs=(Linux CXX QT CMake Docker Golang Others)
+dirs=(Linux CXX QT CMake FFmpeg Docker Golang Others)
 echo '---' >"$file_name"
 printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
 echo '---' >>"$file_name"

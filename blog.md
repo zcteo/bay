@@ -107,6 +107,12 @@
 
   * [CMake 运行 CTest 进行测试](blog/CMake/007_CmakeCTest.md)
 
+* FFmpeg
+
+  * [编译 FFmpeg](blog/FFmpeg/001_BuildFFmpeg.md)
+
+  * [FFmpeg 解码视频](blog/FFmpeg/002_Decode.md)
+
 * Docker
 
   * [Docker 安装与使用](blog/Docker/001_Docker.md)
