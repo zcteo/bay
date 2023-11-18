@@ -99,10 +99,19 @@ make install
 
 需要指定 pkg-config 的搜索路径，不然会搜索到系统的 libx264 和 libx265
 
+不用指定使用 cuda，装了 nv-codec-headers 后会自动检测
+
 ```bash
-PKG_CONFIG_PATH=/home/zzc/x264/lib/pkgconfig/:/home/zzc/x265/lib/pkgconfig/ ./configure --prefix=/home/zzc/ffmpeg --enable-gpl --enable-version3 --disable-static --disable-doc --enable-shared --enable-libx264 --enable-libx265
+PKG_CONFIG_PATH=/home/zzc/x264/lib/pkgconfig/:/home/zzc/x265/lib/pkgconfig/ ./configure --prefix=/home/zzc/ffmpeg --enable-gpl --enable-version3 --disable-doc --enable-shared --enable-libx264 --enable-libx265
 make -j$(nproc)
 make install
+```
+
+如果需要全静态库的话，去掉 `--enable-shared` 并加上下面的指令
+
+```bash
+--extra-ldflags="-static" --pkg-config-flags="--static"
+# 不加这个编译出来的自己是静态库，但还是会依赖其他动态库
 ```
 
 
