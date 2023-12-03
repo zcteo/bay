@@ -177,3 +177,7 @@ patchelf --set-interpreter /lib/ld-musl-aarch64.so.1 nmon
 
 
 
+## 附件
+
+[nmon](/pages-assitant/Linux/020/nmon)
+
