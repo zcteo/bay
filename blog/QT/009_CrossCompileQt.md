@@ -104,7 +104,7 @@ exit
 
 这边就可以下载很新的版本
 
-从 [linaro下载页](https://www.linaro.org/downloads/) 可以看到，现在交叉编译工具链由Arm官方提供：[ARM下载页](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads)
+从 [linaro下载页](https://www.linaro.org/downloads/) 可以看到，现在交叉编译工具链由Arm官方提供：[ARM下载页](https://developer.arm.com/downloads/-/gnu-a)
 
 
 

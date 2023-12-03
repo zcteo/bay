@@ -41,6 +41,10 @@
 
   * [APT 报错](blog/Linux/018_Apt.md)
 
+  * [构建 musl 交叉编译工具链](blog/Linux/019_MakeMusl.md)
+
+  * [交叉编译 nmon](blog/Linux/020_CrossCompileNmon.md)
+
 * CXX
 
   * [Linux C/C++ 开发环境搭建](blog/CXX/001_LinuxCxxDevelopmentEnvironment.md)
