@@ -7,7 +7,7 @@
 
   * [将已有 Linux 系统做成 img 镜像](blog/Linux/001_LinuxSystemToImage.md)
 
-  * [Ubuntu 20.04 桌面美化](blog/Linux/002_BeautifyUbuntuDesktop.md)
+  * [Ubuntu 20.04 / 22.04 桌面美化](blog/Linux/002_BeautifyUbuntuDesktop.md)
 
   * [Linux x86-64 内核编译](blog/Linux/003_CompileKernel.md)
 

@@ -1,4 +1,4 @@
-# Ubuntu 20.04 桌面美化
+# Ubuntu 20.04 / 22.04 桌面美化
 
 [TOC]
 
@@ -7,13 +7,21 @@
 下载 gnome-tweak 和 gnome-shell-extensions
 
 ```bash
+# ubuntu 20.04
 sudo apt install gnome-tweak-tool
+sudo apt install gnome-shell-extensions
+# ubuntu 22.04
+sudo apt install gnome-tweak
 sudo apt install gnome-shell-extensions
 ```
 
 打开 tweak (中文叫优化)，勾选 user themes；如果没有这个选项就注销或者重启一下
 
+ubuntu22.04 的扩展有独立的 gnome-extensions-app (中文叫扩展)，没有在 tweak 里面
+
 ![01](img/002/01.png)
+
+
 
 ## 安装美化主题
 
@@ -73,11 +81,9 @@ gnome-shell --version
 
 ![07](img/002/07.png)
 
-下载后解压，将解压后的目录移到：~/.local/share/gnome-shell/extensions/ 下
+使用 `gnome-extensions install xxxx.zip` 安装
 
-打开对应扩展目录下的 metadata.json 文件，查看 uuid，重命名刚才移过来的目录名为 uuid
-
-按 `Alt + F2` 输入 r 后按回车，重启
+按 `Alt + F2` 输入 r 后按回车，重启 (22.04 如果是 Wayland，不能重启，目前是直接重启电脑)
 
 关闭并重新打开 tweaks，在扩展处就可以看到安装的扩展了
 
