@@ -1,4 +1,7 @@
 #!/bin/bash
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+cd "${SCRIPT_DIR}/.." || exit 1
+
 file_name=$(pwd)/blog.md
 # 先检查文章有没有更新，节省一点时间
 article_update=$(git diff --cached --name-only | grep '.*\.md')
@@ -17,13 +20,13 @@ rm -f "$file_name"
 tmp=$(pwd)/tmp
 blog=$(pwd)/blog
 cd "$blog" || exit 1
-# 这里可以指定顺序
-dirs=(Linux CXX QT CMake FFmpeg Docker Golang Others)
+
 echo '---' >"$file_name"
 printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
 echo '---' >>"$file_name"
 
-for dir in "${dirs[@]}"; do
+categories=(Linux CXX QT CMake FFmpeg Docker Golang Others)
+for dir in "${categories[@]}"; do
     if [ -f "$dir" ] || [ "$dir" == "SaveOnly" ]; then
         continue
     else

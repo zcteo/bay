@@ -1,0 +1,41 @@
+name: Blog Generator
+
+# 触发时机
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu:18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set Env
+        run: |
+          apt update
+          apt install ruby-full gcc g++ make locales -y
+          locale-gen en_US.UTF-8
+          gem install bundler -v 2.0.2
+
+      - name: Install
+        run: bundle install
+
+      - name: Build
+        working-directory: ./scripts
+        run: build.sh
+
+      - name: Commit and Push
+        working-directory: ./_site
+        run: |
+          git config user.name EricTeo
+          git config user.email zcteo.cn@gmail.com
+          git config core.autocrlf input
+          git init
+          git checkout -b master
+          git add .
+          git commit -m 'init'
+          git push "https://github.com/zcteo/zcteo.github.io" HEAD:master -f -q
