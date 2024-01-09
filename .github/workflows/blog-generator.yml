@@ -8,34 +8,38 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu:18.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: Set Env
-        run: |
-          apt update
-          apt install ruby-full gcc g++ make locales -y
-          locale-gen en_US.UTF-8
-          gem install bundler -v 2.0.2
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.5
+
+      - name: Gen Locale
+        run: sudo locale-gen en_US.UTF-8
 
       - name: Install
-        run: bundle install
+        run: |
+          gem install bundler -v 2.0.2
+          bundle install
 
       - name: Build
         working-directory: ./scripts
-        run: build.sh
+        run: ./build.sh
 
       - name: Commit and Push
         working-directory: ./_site
         run: |
-          git config user.name EricTeo
-          git config user.email zcteo.cn@gmail.com
-          git config core.autocrlf input
+          git config --global user.name EricTeo
+          git config --global user.email zcteo.cn@gmail.com
+          git config --global core.autocrlf input
           git init
           git checkout -b master
           git add .
           git commit -m 'init'
-          git push "https://github.com/zcteo/zcteo.github.io" HEAD:master -f -q
+          git push "https://zcteo:${{secrets.TOKEN}}@github.com/zcteo/zcteo.github.io" HEAD:master -f -q
