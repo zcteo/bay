@@ -4,18 +4,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   {% assign page_is_article = false %}
-  {% if page.layout == "post" %}{% assign page_is_article = true %}{% endif %}
+  {% if page.layout == "post" %}
+    {% assign page_is_article = true %}
+  {% endif %}
 
   {% assign page_title = "" %}
-  {% if page.draft %}{% assign page_title = page_title | append: "[DRAFT] " %}{% endif %}
-  {% if page.title %}
-  {% if page.layout == "blog" %}
-  {% assign page_title = page_title | append: site.title | append: " " | append: page.title %}
-  {% else %}
-  {% assign page_title = page_title | append: page.title %}
+  {% if page.draft %}
+    {% assign page_title = page_title | append: "[DRAFT] " %}
   {% endif %}
+  {% if page.title %}
+    {% assign page_title = page.title | append: " " | append: site.title %}
   {% else %}
-  {% assign page_title = site.title %}
+    {% assign page_title = site.title %}
   {% endif %}
 
   {% assign page_description = "" %}
