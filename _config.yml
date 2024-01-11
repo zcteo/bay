@@ -45,9 +45,9 @@ valine:
 analytics:
   busunzi:
     enable: true
-    site_pv: 131072
-    site_uv: 32768
-    page_pv: 1024
+    site_pv: 100000
+    site_uv: 10000
+    page_pv: 1000
   google:
     enable: false
     value: 'G-H9X9BNEKZG'

@@ -3,3 +3,5 @@ _site
 .jekyll-cache
 covert_url.sh
 .public/
+*bak
+*bak/
