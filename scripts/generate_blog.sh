@@ -22,7 +22,7 @@ blog=$(pwd)/blog
 cd "$blog" || exit 1
 
 echo '---' >"$file_name"
-printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
+printf '  layout: default\n  title: Blog\n  slug: /blog\n' >>"$file_name"
 echo '---' >>"$file_name"
 
 categories=(linux cpp qt cmake ffmpeg docker golang others)
