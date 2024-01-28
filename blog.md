@@ -45,6 +45,8 @@
 
   * [交叉编译 nmon](blog/Linux/020_CrossCompileNmon.md)
 
+  * [创建桌面快捷方式](blog/Linux/021_DesktopEntry.md)
+
 * CXX
 
   * [Linux C/C++ 开发环境搭建](blog/CXX/001_LinuxCxxDevelopmentEnvironment.md)
@@ -70,6 +72,8 @@
   * [C++ 11 类型萃取及可变参数模板](blog/CXX/011_TypeTraitsAndVariadicTemplate.md)
 
   * [C++ 11 可变参数模板类](blog/CXX/012_VariadicTemplateClass.md)
+
+  * [CRC 校验](blog/CXX/013.md)
 
 * QT
 
