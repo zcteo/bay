@@ -11,7 +11,7 @@ while IFS= read -r line; do
         title="$(echo "$line" | grep -o '\[.*\]' | sed -e 's/\[//g' -e 's/\]//g')"
         (
             echo '---'
-            echo 'layout: default'
+            echo 'layout: page'
             echo "title: '${title}'"
             echo '---'
             echo ''

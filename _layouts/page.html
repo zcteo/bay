@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrapper">
+      <article class="post-content">
+        {{ content }}
+      </article>
+      <div>
+        <hr style="margin-top: 44px; margin-bottom: 18px;">
+        <p><em>由于个人水平有限，文中若有不合理或不正确的地方欢迎指出改正</em></p>
+      </div>
+    </div>
+    <!-- 生成目录 -->
+    <script type="text/javascript" src="{{ '/assets/js/article.js' | absolute_url }}"></script>
+    <!-- valine 评论系统 -->
+    {% if site.valine.enable %}
+    <div id="valineComments" class="wrapper" style="margin-top: 44px; margin-bottom: 22px"></div>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script>
+      new Valine({
+        el: '#valineComments',
+        appId: '{{ site.valine.appId }}',
+        appKey: '{{ site.valine.appKey }}',
+        placeholder: '{{ site.valine.placeholder }}',
+        serverURLs: '{{ site.valine.serverURLs }}',
+        avatar: 'robohash',
+        enableQQ: true,
+        requiredFields: ['nick']
+      })
+    </script>
+    {% endif %}
+  </div>
+
+  {% include footer.html %}
+
+  {% include foot.html %}
+</body>
+
+</html>
