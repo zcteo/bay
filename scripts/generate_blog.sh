@@ -25,7 +25,7 @@ echo '---' >"$file_name"
 printf '  layout: blog\n  title: Blog\n  slug: /blog\n' >>"$file_name"
 echo '---' >>"$file_name"
 
-categories=(Linux CXX QT CMake FFmpeg Docker Golang Others)
+categories=(linux cpp qt cmake ffmpeg docker golang others)
 for dir in "${categories[@]}"; do
     if [ -f "$dir" ]; then
         continue
