@@ -1,5 +1,5 @@
 ---
-  layout: default
+  layout: blog
   title: Blog
   slug: /blog
 ---
@@ -74,6 +74,8 @@
   * [C++ 11 可变参数模板类](blog/cpp/012.md)
 
   * [CRC 校验](blog/cpp/013.md)
+
+  * [使用 zlib 压缩解压文件](blog/cpp/014.md)
 
 * qt
 
@@ -156,3 +158,4 @@
   * [Valine 评论系统](blog/others/008.md)
 
   * [获取电信光猫超级密码](blog/others/009.md)
+
