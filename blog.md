@@ -101,6 +101,8 @@
 
   * [Windows 下 C++ 程序以管理员运行(UAC)](blog/qt/011.md)
 
+  * [使用 CMake 编译 Qt 6.5](blog/qt/012.md)
+
 * cmake
 
   * [CMake 安装](blog/cmake/001.md)
