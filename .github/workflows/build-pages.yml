@@ -3,7 +3,7 @@ name: Action Build Pages
 on:
   push:
     branches:
-      - master
+      - pages
 
 jobs:
   Build:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: pages
           fetch-depth: 0
 
       - name: Setup ruby
@@ -29,8 +29,7 @@ jobs:
           bundle install
 
       - name: Build
-        working-directory: ./scripts
-        run: ./build.sh
+        run: ./_scripts/build.sh $(pwd)
 
       - name: Config git
         run: |

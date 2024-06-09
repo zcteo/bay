@@ -21,7 +21,7 @@ Eric Teo
     托管于 <a href="https://github.com/zcteo/zcteo.github.io">GitHub</a>
 </p>
 <p>
-    模板由 <a href="https://github.com/eliottvincent/bay">bay</a> 提供
+    模板由 <a href="https://github.com/zcteo/bay">bay</a> 提供
 </p>
 <p>
     首页图片来自 <a href="https://cn.bing.com/">Microsoft Bing</a>
