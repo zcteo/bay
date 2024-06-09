@@ -3,8 +3,9 @@ set -e
 cd "$1" || exit 1
 echo "working directory: $(pwd)"
 
-cp -ar blog blog.bak
-cp blog.md blog.md.bak
+cp -ar blog _blog.bak
+cp blog.md _blog.md.bak
+rm -rf blog/SaveOnly
 
 while IFS= read -r line; do
     if [[ $line =~ .*\(blog/.*md\) ]]; then
@@ -34,11 +35,7 @@ else
     bundle exec jekyll build --future
 fi
 
-rm -rf _site/scripts
-rm -rf _site/blog/SaveOnly
-rm -rf _site/blog.bak
-rm -rf _site/blog.md.bak
 rm -rf _site/README.md
 rm -rf blog
-mv blog.bak blog
-mv blog.md.bak blog.md
+mv _blog.bak blog
+mv _blog.md.bak blog.md
