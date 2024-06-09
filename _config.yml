@@ -35,9 +35,9 @@ footer:
 
 # 评论系统
 valine:
-  enable: true
-  appId: 'ppzr2mzCo7as90WoayQJL7Pl-MdYXbMMI'
-  appKey: 'N1Yw0XM7bvh2gGQFShapFEQN'
+  enable: false
+  appId: ''
+  appKey: ''
   placeholder: '欢迎提出您的宝贵意见，正确填写邮箱地址可收到邮件提醒'
   serverURLs: 'https://ppzr2mzc.api.lncldglobal.com'
 
@@ -50,7 +50,7 @@ analytics:
     page_pv: 1000
   google:
     enable: false
-    value: 'G-H9X9BNEKZG'
+    value: ''
   baidu:
-    enable: true
-    value: '62e91d20eba5a638ec237f1451dc45c1'
+    enable: 'false'
+    value: ''

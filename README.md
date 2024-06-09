@@ -1,6 +1,8 @@
-# 闻道
+# Bay
 
-默认使用 GitHub Action 生成并托管于 github pages
+jekyll 博客模板
+
+基于 https://github.com/eliottvincent/bay 修改，用于 [闻道](https://zcteo.cn/)
 
 
 ## 环境依赖
