@@ -1,6 +1,7 @@
 #!/bin/bash
-SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
-cd "${SCRIPT_DIR}/.." || exit 1
+set -e
+cd "$1" || exit 1
+echo "working directory: $(pwd)"
 
 cp -ar blog blog.bak
 cp blog.md blog.md.bak
