@@ -5,3 +5,5 @@ covert_url.sh
 .public/
 *bak
 *bak/
+.vscode/
+.idea/

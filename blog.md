@@ -163,3 +163,5 @@
 
   * [python 自动获取网关地址并开启代理](blog/others/010.md)
 
+  * [OpenWrt 使用](blog/others/011.md)
+
