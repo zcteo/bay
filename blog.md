@@ -77,6 +77,8 @@
 
   * [使用 zlib 压缩解压文件](blog/cpp/014.md)
 
+  * [QNX 调试](blog/cpp/015.md)
+
 * qt
 
   * [Linux 安装/编译 QT](blog/qt/001.md)
