@@ -169,3 +169,5 @@
 
   * [Wireshark Lua 解析自定义协议](blog/others/012.md)
 
+  * [终端设置代理](blog/others/013.md)
+
