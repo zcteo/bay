@@ -171,3 +171,5 @@
 
   * [终端设置代理](blog/others/013.md)
 
+  * [领克 OSN 安装软件](blog/others/014.md)
+
