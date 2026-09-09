@@ -175,3 +175,5 @@
 
   * [Tailscale 搭建 DERP 节点](blog/others/015.md)
 
+  * [vllm](blog/others/016.md)
+
